@@ -16,7 +16,7 @@ namespace SaaS.Web
         //public static readonly HubClient Client;
 
         public static readonly FormsAuth Forms;
-        public static readonly SaaSAuth Auth;
+        public static readonly WebAuth Auth;
 
 
         static Global()
