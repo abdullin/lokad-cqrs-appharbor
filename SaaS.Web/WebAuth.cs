@@ -14,7 +14,7 @@ using Sample;
 
 namespace SaaS.Web
 {
-    public sealed class AzureAuth
+    public sealed class WebAuth
     {
         internal static bool CheckPassword(string existingHash, string existingSalt, string password)
         {
@@ -39,7 +39,7 @@ namespace SaaS.Web
 
         readonly WebEndpoint _webEndpoint;
 
-        public AzureAuth(WebEndpoint webEndpoint)
+        public WebAuth(WebEndpoint webEndpoint)
         {
             _webEndpoint = webEndpoint;
         }
