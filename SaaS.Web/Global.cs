@@ -5,6 +5,7 @@
 
 #endregion
 
+using System.Configuration;
 using Lokad.Cqrs;
 using SaaS.Wires;
 
@@ -17,10 +18,11 @@ namespace SaaS.Web
 
         public static readonly FormsAuth Forms;
         public static readonly WebAuth Auth;
-
+        public static readonly string CommitId;
 
         static Global()
         {
+            CommitId = ConfigurationManager.AppSettings.Get("appharbor.commit_id");
             Root = FileStorage.CreateConfig(@"C:\data\hub-store");
 
             var streamer = Contracts.CreateStreamer();
