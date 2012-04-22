@@ -1,0 +1,105 @@
+﻿@model string
+
+@{
+    Layout = "~/Views/Shared/_AnonymousLayout.cshtml";
+    ViewBag.Title = "Login";
+}
+
+@section Head
+{
+    <script src="@Url.Content("~/content/openid-selector/openid-jquery.js")" type="text/javascript"> </script>
+    <script src="@Url.Content("~/content/openid-selector/openid-en.js")" type="text/javascript"> </script>
+    <link href="@Url.Content("~/Content/openid-selector/openid.css")" rel="stylesheet" type="text/css" />
+}
+
+
+
+<div class="container">
+    @if (ViewBag.GlobalUserMessage != null)
+    {
+        <div class="row">
+            <div class="span12">
+                <div class="alert-@ViewBag.GlobalUserMessageType alert alert-block">
+                    <p>@Html.Encode(ViewBag.GlobalUserMessage)</p>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="row">
+        <div class="span12">
+            <div class="hero-unit">
+                <h1>Login to Admin <small>FYI, all your actions are logged.</small></h1>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model))
+            {
+                <div class="alert-block alert-error">
+                    @Html.Encode(Model)
+                </div>
+            }
+        </div>
+    </div>
+
+    
+    <div class="row">
+
+        <div class="span6">
+            @using (Html.BeginForm("authenticate", "auth",
+                new {ReturnUrl = @HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"])}, FormMethod.Post,
+                new {id = "openid_form"}))
+            {
+                <input type="hidden" name="action" value="verify" />
+                <div id="openid_choice">
+                    <div id="openid_btns">
+                    </div>
+                </div>
+                <div id="openid_input_area" class="hide">
+                    @Html.TextBox("openid_identifier", null, new {id = "openid_identifier"}) 
+                    <input type="submit" value="Login" class="btn" />
+                </div>
+            }
+            @using (Html.BeginForm("authenticate", "auth",
+                new {ReturnUrl = @HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"])}, FormMethod.Post,
+                new {@class = "form-stacked"}))
+            {
+                <input type="hidden" name="action" value="verify" />
+
+                <div class="clearfix">
+                    <label for="openid_identifier_2">Or use your OpenID</label>
+                    <div class="input">
+                        <input type="text" id="openid_identifier_2" name="openid_identifier_2" class="span5" 
+                               placeholder="ex: http://user.myopenid.com"/>
+                        <input type="submit" value="Login" class="btn" />    
+                    </div>
+                    
+                        
+                </div>
+            }
+        </div>
+        <div class="span6">
+            <div class="well">
+                @using (Html.BeginForm("AuthLogin", "Auth", new {ReturnUrl = @HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"])}, FormMethod.Post,
+                    new {@class = "form-inline form-horizontal"}))
+                {
+                    <input type="hidden" name="action" value="verify" />
+
+                    <input type="text" id="user" name="user" class="span3" placeholder="Login" />
+                    <input type="password" id="password" name="password" class="span2" placeholder="Password"/>
+                    <input type="submit" value="Login" class="btn span1" />
+                }
+            
+            </div>
+
+          
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        openid.no_sprite = true;
+        openid.img_path = '@Url.Content("~/content/openid-selector/images/")';
+        openid.init("openid_identifier");
+        $('#user').focus();
+    });
+</script>
