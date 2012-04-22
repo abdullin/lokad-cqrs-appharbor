@@ -8,9 +8,13 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Lokad.Cqrs;
 using Lokad.Cqrs.Envelope;
 using Lokad.Cqrs.Evil;
+using ProtoBuf;
+using ProtoBuf.Meta;
+using Sample;
 
 namespace SaaS.Wires
 {
@@ -18,13 +22,13 @@ namespace SaaS.Wires
     {
         static Type[] LoadMessageContracts()
         {
-            //var messages = new[] { typeof(CustomerCreated), typeof(UserIndexLookup) }
-            //    .SelectMany(t => t.Assembly.GetExportedTypes())
-            //    .Where(t => typeof(IHubMessage).IsAssignableFrom(t))
-            //    .Where(t => !t.IsAbstract)
-            //    .ToArray();
-            //return messages;
-            throw new NotImplementedException();
+            var messages = new[] { typeof(InstanceStarted) }
+                .SelectMany(t => t.Assembly.GetExportedTypes())
+                .Where(t => typeof(ISampleMessage).IsAssignableFrom(t))
+                .Where(t => !t.IsAbstract)
+                .ToArray();
+            return messages;
+            
         }
 
         public static IEnvelopeStreamer CreateStreamer()
@@ -41,8 +45,8 @@ namespace SaaS.Wires
 
             public EnvelopeContract DeserializeEnvelope(Stream stream)
             {
-                throw new NotImplementedException();
-                //return Serializer.Deserialize<EnvelopeContract>(stream);
+                
+                return Serializer.Deserialize<EnvelopeContract>(stream);
             }
         }
 
@@ -51,16 +55,15 @@ namespace SaaS.Wires
             public DataSerializer(ICollection<Type> knownTypes)
                 : base(knownTypes)
             {
-                throw new NotImplementedException();
-                //RuntimeTypeModel.Default[typeof(DateTimeOffset)].Add("m_dateTime", "m_offsetMinutes");
+                RuntimeTypeModel.Default[typeof(DateTimeOffset)].Add("m_dateTime", "m_offsetMinutes");
             }
 
             protected override Formatter PrepareFormatter(Type type)
             {
                 var name = ContractEvil.GetContractReference(type);
-                throw new NotImplementedException();
-                //var formatter = RuntimeTypeModel.Default.CreateFormatter(type);
-                //return new Formatter(name, formatter.Deserialize, (o, stream) => formatter.Serialize(stream, o));
+                
+                var formatter = RuntimeTypeModel.Default.CreateFormatter(type);
+                return new Formatter(name, formatter.Deserialize, (o, stream) => formatter.Serialize(stream, o));
             }
         }
     }
