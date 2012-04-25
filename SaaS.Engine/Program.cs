@@ -16,6 +16,8 @@ namespace SaaS.Engine
     {
         static void Main(string[] args)
         {
+            
+
             ConfigureObserver();
 
             var settings = LoadSettings();
@@ -62,6 +64,10 @@ namespace SaaS.Engine
             using (var engine = components.Builder.Build())
             {
                 var task = engine.Start(cts.Token);
+
+                var version = ConfigurationManager.AppSettings.Get("appharbor.commit_id");
+                var instanceStarted = new InstanceStarted(version, "engine", Process.GetCurrentProcess().ProcessName);
+                components.Simple.SendOne(instanceStarted);
 
                 //startupMessages.ForEach(c => components.Sender.SendCommandsAsBatch(new ISampleCommand[] { c }));
 

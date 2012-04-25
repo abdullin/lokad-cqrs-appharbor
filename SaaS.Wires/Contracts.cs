@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Lokad.Cqrs;
 using Lokad.Cqrs.AtomicStorage;
 using Lokad.Cqrs.Envelope;
@@ -40,15 +41,17 @@ namespace SaaS.Wires
 
         sealed class EnvelopeSerializer : IEnvelopeSerializer
         {
+            static byte[] NL = Encoding.UTF8.GetBytes(Environment.NewLine);
             public void SerializeEnvelope(Stream stream, EnvelopeContract contract)
             {
-                throw new NotImplementedException();
+                stream.Write(NL,0,NL.Length);
+                JsonSerializer.SerializeToStream(contract, stream);
+                stream.Write(NL, 0, NL.Length);
             }
 
             public EnvelopeContract DeserializeEnvelope(Stream stream)
             {
-                
-                return Serializer.Deserialize<EnvelopeContract>(stream);
+                return JsonSerializer.DeserializeFromStream<EnvelopeContract>(stream);
             }
         }
 
@@ -63,9 +66,17 @@ namespace SaaS.Wires
             protected override Formatter PrepareFormatter(Type type)
             {
                 var name = ContractEvil.GetContractReference(type);
-                
-                var formatter = RuntimeTypeModel.Default.CreateFormatter(type);
-                return new Formatter(name, formatter.Deserialize, (o, stream) => formatter.Serialize(stream, o));
+                return new Formatter(name, s => JsonSerializer.DeserializeFromStream(type, s), (o,s) =>
+                    {
+                        using(var writer = new StreamWriter(s))
+                        {
+                            writer.WriteLine();
+                            writer.WriteLine(JsvFormatter.Format(JsonSerializer.SerializeToString(o, type)));
+                        }
+                        
+                    });
+                //var formatter = RuntimeTypeModel.Default.CreateFormatter(type);
+                //return new Formatter(name, formatter.Deserialize, (o, stream) => formatter.Serialize(stream, o));
             }
         }
     }
@@ -89,7 +100,13 @@ namespace SaaS.Wires
 
         public void Serialize<TEntity>(TEntity entity, Stream stream)
         {
-            JsonSerializer.SerializeToStream(entity, stream);
+            var s = JsonSerializer.SerializeToString(entity);
+            s = JsvFormatter.Format(s);
+
+            using (var writer = new StreamWriter(stream))
+            {
+                writer.Write(s);
+            }
         }
 
         public TEntity Deserialize<TEntity>(Stream stream)

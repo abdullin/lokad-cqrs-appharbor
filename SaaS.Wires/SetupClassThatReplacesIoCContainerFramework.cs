@@ -30,6 +30,7 @@ namespace SaaS.Wires
             public SetupClassThatReplacesIoCContainerFramework Setup;
             public CqrsEngineBuilder Builder;
             public ICommandSender Sender;
+            public SimpleMessageSender Simple;
         }
 
         public AssembledComponents AssembleComponents()
@@ -42,7 +43,8 @@ namespace SaaS.Wires
             var events = new RedirectToDynamicEvent();
 
             var eventStore = new TapeStreamEventStore(Tapes(Topology.TapesContainer), Streamer, routerQueue);
-            var flow = new CommandSender(new SimpleMessageSender(Streamer, routerQueue));
+            var simple = new SimpleMessageSender(Streamer, routerQueue);
+            var flow = new CommandSender(simple);
             var builder = new CqrsEngineBuilder(Streamer);
 
             // route queue infrastructure together
@@ -63,7 +65,8 @@ namespace SaaS.Wires
                 {
                     Builder = builder,
                     Sender = flow,
-                    Setup = this
+                    Setup = this,
+                    Simple = simple
                 };
         }
 
