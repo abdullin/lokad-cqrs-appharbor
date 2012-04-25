@@ -62,6 +62,10 @@
       <Project>{2A4A9A2C-5D8D-4078-B118-02A1D386A9FA}</Project>
       <Name>SaaS.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SaaS.Domain\SaaS.Domain.csproj">
+      <Project>{85F10E26-B454-4719-9ADD-A8CD147B0AE4}</Project>
+      <Name>SaaS.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

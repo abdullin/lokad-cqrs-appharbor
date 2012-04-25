@@ -14,15 +14,16 @@ namespace SaaS.Wires
     public sealed class SetupClassThatReplacesIoCContainerFramework
     {
         public IStreamRoot Streaming;
-        public ITapeContainer Tapes;
+        public Func<string,ITapeContainer> Tapes;
+        public IDocumentStore Docs;
 
         public Func<string, IQueueWriter> CreateQueueWriter;
         public Func<string, IPartitionInbox> CreateInbox;
-        public Func<IDocumentStrategy, NuclearStorage> CreateNuclear;
+        
 
 
-        public IEnvelopeStreamer Streamer = Contracts.CreateStreamer();
-        public IDocumentStrategy Strategy = new DocumentStrategy();
+        public readonly IEnvelopeStreamer Streamer = Contracts.CreateStreamer();
+        public readonly IDocumentStrategy Strategy = new DocumentStrategy();
 
         public sealed class AssembledComponents
         {
@@ -34,13 +35,13 @@ namespace SaaS.Wires
         public AssembledComponents AssembleComponents()
         {
             // set up all the variables
-            var docs = CreateNuclear(Strategy).Container;
+            
             var routerQueue = CreateQueueWriter(Topology.RouterQueue);
 
             var commands = new RedirectToCommand();
             var events = new RedirectToDynamicEvent();
 
-            var eventStore = new TapeStreamEventStore(Tapes, Streamer, routerQueue);
+            var eventStore = new TapeStreamEventStore(Tapes(Topology.TapesContainer), Streamer, routerQueue);
             var flow = new CommandSender(new SimpleMessageSender(Streamer, routerQueue));
             var builder = new CqrsEngineBuilder(Streamer);
 
@@ -51,11 +52,12 @@ namespace SaaS.Wires
 
 
             // message wiring magic
-            //DomainBoundedContext.ApplicationServices(docs, eventStore).ForEach(commands.WireToWhen);
-            //DomainBoundedContext.Receptors(flow).ForEach(events.WireToWhen);
-            //DomainBoundedContext.Projections(docs).ForEach(events.WireToWhen);
+            DomainBoundedContext.ApplicationServices(Docs, eventStore).ForEach(commands.WireToWhen);
+            DomainBoundedContext.Receptors(flow).ForEach(events.WireToWhen);
+            DomainBoundedContext.Projections(Docs).ForEach(events.WireToWhen);
+            DomainBoundedContext.Tasks(flow, Docs, false).ForEach(builder.AddTask);
 
-            ClientBoundedContext.Projections(docs).ForEach(events.WireToWhen);
+            ClientBoundedContext.Projections(Docs).ForEach(events.WireToWhen);
 
             return new AssembledComponents
                 {

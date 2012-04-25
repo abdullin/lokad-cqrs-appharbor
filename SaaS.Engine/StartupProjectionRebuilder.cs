@@ -24,7 +24,7 @@ namespace SaaS.Engine
             var tracked = new ProjectionInspectingContainer(memoryContainer);
 
             var projections = new List<object>();
-            //projections.AddRange(DomainBoundedContext.Projections(tracked));
+            projections.AddRange(DomainBoundedContext.Projections(tracked));
             projections.AddRange(ClientBoundedContext.Projections(tracked));
             //projections.AddRange(ApiOpsBoundedContext.Projections(tracked));
 
