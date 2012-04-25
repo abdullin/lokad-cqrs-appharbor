@@ -10,11 +10,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Lokad.Cqrs;
+using Lokad.Cqrs.AtomicStorage;
 using Lokad.Cqrs.Envelope;
 using Lokad.Cqrs.Evil;
 using ProtoBuf;
 using ProtoBuf.Meta;
 using Sample;
+using ServiceStack.Text;
 
 namespace SaaS.Wires
 {
@@ -65,6 +67,34 @@ namespace SaaS.Wires
                 var formatter = RuntimeTypeModel.Default.CreateFormatter(type);
                 return new Formatter(name, formatter.Deserialize, (o, stream) => formatter.Serialize(stream, o));
             }
+        }
+    }
+
+
+    public sealed class DocumentStrategy : IDocumentStrategy
+    {
+        public string GetEntityBucket<T>()
+        {
+            return "doc-" + typeof(T).Name.ToLowerInvariant();
+        }
+
+        public string GetEntityLocation(Type entity, object key)
+        {
+            if (key is unit)
+                return entity.Name.ToLowerInvariant() + ".txt";
+            if (key is IIdentity)
+                return IdentityConvert.ToStream((IIdentity)key) + ".txt";
+            return key.ToString().ToLowerInvariant() + ".txt";
+        }
+
+        public void Serialize<TEntity>(TEntity entity, Stream stream)
+        {
+            JsonSerializer.SerializeToStream(entity, stream);
+        }
+
+        public TEntity Deserialize<TEntity>(Stream stream)
+        {
+            return JsonSerializer.DeserializeFromStream<TEntity>(stream);
         }
     }
 }

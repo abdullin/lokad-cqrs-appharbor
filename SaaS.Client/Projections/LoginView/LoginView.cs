@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using Lokad.Cqrs.AtomicStorage;
 using Sample;
 
 namespace SaaS.Client
@@ -67,4 +68,85 @@ namespace SaaS.Client
         Password,
         Identity
     }
+
+    public sealed class LoginViewProjection
+    {
+        readonly IDocumentWriter<UserId, LoginView> _writer;
+
+        public LoginViewProjection(IDocumentWriter<UserId, LoginView> writer)
+        {
+            _writer = writer;
+        }
+
+        static TimeSpan DefaultThreshold = TimeSpan.FromMinutes(5);
+
+        public void When(SecurityPasswordAdded e)
+        {
+            _writer.Add(e.UserId, new LoginView
+            {
+                Security = e.Id,
+                Display = e.DisplayName,
+                Token = e.Token,
+                PasswordHash = e.PasswordHash,
+                PasswordSalt = e.PasswordSalt,
+                Type = LoginViewType.Password,
+                LoginTrackingThreshold = DefaultThreshold
+            });
+        }
+
+        public void When(SecurityIdentityAdded e)
+        {
+            _writer.Add(e.UserId, new LoginView
+            {
+                Security = e.Id,
+                Display = e.DisplayName,
+                Token = e.Token,
+                Identity = e.Identity,
+                Type = LoginViewType.Identity,
+                LoginTrackingThreshold = DefaultThreshold
+            });
+        }
+
+        
+        public void When(UserLocked e)
+        {
+            _writer.UpdateOrThrow(e.Id, lv =>
+            {
+                lv.LockedOutTillUtc = e.LockedTillUtc;
+                lv.LockoutMessage = e.LockReason;
+            });
+        }
+        public void When(UserUnlocked e)
+        {
+            _writer.UpdateOrThrow(e.Id, lv =>
+            {
+                lv.LockedOutTillUtc = DateTime.MinValue;
+                lv.LockoutMessage = null;
+            });
+        }
+
+        public void When(UserCreated e)
+        {
+            _writer.UpdateOrThrow(e.Id, lv => { lv.LoginTrackingThreshold = e.ActivityThreshold; });
+        }
+
+        public void When(UserLoginSuccessReported e)
+        {
+            _writer.UpdateOrThrow(e.Id, lv => { lv.LastLoginUtc = e.TimeUtc; });
+        }
+        public void When(SecurityItemDisplayNameUpdated e)
+        {
+            _writer.UpdateOrThrow(e.UserId, lv => lv.Display = e.DisplayName);
+        }
+        public void When(SecurityItemRemoved e)
+        {
+            _writer.TryDelete(e.UserId);
+        }
+
+        public void When(PermissionAddedToSecurityItem e)
+        {
+            _writer.UpdateOrThrow(e.UserId, lv => lv.Permissions.Add(e.Permission));
+        }
+    }
+
 }

@@ -8,6 +8,9 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using Lokad.Cqrs;
+using Lokad.Cqrs.AtomicStorage;
+using Sample;
 
 namespace SaaS.Client
 {
@@ -40,4 +43,33 @@ namespace SaaS.Client
             Identities = new Dictionary<string, long>(StringComparer.InvariantCultureIgnoreCase);
         }
     }
+
+    public sealed class LoginsIndexProjection
+    {
+        readonly IDocumentWriter<unit, LoginsIndexView> _writer;
+        public LoginsIndexProjection(IDocumentWriter<unit, LoginsIndexView> writer)
+        {
+            _writer = writer;
+        }
+
+        public void When(SecurityPasswordAdded e)
+        {
+            _writer.UpdateEnforcingNew(unit.it, si => si.Logins[e.Login] = e.UserId.Id);
+        }
+        public void When(SecurityIdentityAdded e)
+        {
+            _writer.UpdateEnforcingNew(unit.it, si => si.Identities[e.Identity] = e.UserId.Id);
+        }
+
+        public void When(SecurityItemRemoved e)
+        {
+            _writer.UpdateEnforcingNew(unit.it, si =>
+            {
+                si.Keys.Remove(e.Lookup);
+                si.Logins.Remove(e.Lookup);
+                si.Identities.Remove(e.Lookup);
+            });
+        }
+    }
+
 }
