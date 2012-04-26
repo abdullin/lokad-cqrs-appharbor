@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Lokad.Cqrs;
 using Lokad.Cqrs.AtomicStorage;
 using Sample.Aggregates.Security;
 using Sample.Aggregates.User;
