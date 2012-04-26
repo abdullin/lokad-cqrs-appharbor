@@ -17,5 +17,4 @@ namespace SaaS.Client.Projections.Releases
             List = new List<string>();
         }
     }
-
 }

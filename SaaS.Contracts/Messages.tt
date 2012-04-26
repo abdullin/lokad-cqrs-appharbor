@@ -39,13 +39,14 @@ CreateSecurityAggregate? ()
 CreateSecurityFromRegistration? (registration, string login, string pwd, display, string optionalIdentity)
 SecurityAggregateCreated! ()
 
+
 AddSecurityPassword? (display, string login, string password)
 SecurityPasswordAdded! (user, display, string login, string passwordHash, string passwordSalt, string token)
 
 AddSecurityIdentity? (display, string identity)
 SecurityIdentityAdded! (user, display, string identity, string token)
 
-
+ 
 RemoveSecurityItem? (user)
 SecurityItemRemoved! (user, string lookup, string type)
 

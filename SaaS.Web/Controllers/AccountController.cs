@@ -6,6 +6,7 @@
 #endregion
 
 using System.Web.Mvc;
+using SaaS.Client.Projections.Releases;
 
 namespace SaaS.Web.Controllers
 {
@@ -14,13 +15,13 @@ namespace SaaS.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View("welcome");
+            var view = Global.Client.GetSingleton<RegisteredUsers>();
+            return View("users", view);
         }
 
         public ActionResult Welcome()
         {
             return View("welcome");
-
         }
     }
 }

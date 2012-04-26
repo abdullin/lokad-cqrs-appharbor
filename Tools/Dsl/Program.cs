@@ -19,7 +19,7 @@ namespace Hub.Dsl
 
         static void Main(string[] args)
         {
-            var info = new DirectoryInfo("..\\..\\..\\..\\");
+            var info = new DirectoryInfo("..\\..\\..\\..\\SaaS.Contracts");
 
             var files = info.GetFiles("*.tt", SearchOption.AllDirectories);
 

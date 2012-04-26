@@ -16,7 +16,7 @@ namespace SaaS.Client
             yield return new RegistrationsProjection(docs.GetWriter<RegistrationId, RegistrationView>());
             // system
             yield return new ReleasesProjection(docs.GetWriter<unit, ReleasesView>());
-
+            yield return new RegisteredProjection(docs.GetWriter<unit, RegisteredUsers>());
         }
     }
 }

@@ -42,9 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Projections\LoginIndex\LoginsIndexView.cs" />
-    <Compile Include="Projections\LoginView\ClientBoundedContext.cs" />
+    <Compile Include="ClientBoundedContext.cs" />
     <Compile Include="Projections\LoginView\LoginView.cs" />
     <Compile Include="Projections\Registration\RegistrationView.cs" />
+    <Compile Include="Projections\Releases\RegisteredUsers.cs" />
     <Compile Include="Projections\Releases\ReleasesView.cs" />
     <Compile Include="Projections\Releases\ReleasesProjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
