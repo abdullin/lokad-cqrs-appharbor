@@ -116,12 +116,7 @@ namespace SaaS.Web.Controllers
                 : Global.Auth.PerformLoginAuth(user, password);
             if (result.IsSuccess)
             {
-                var permissions = result.Identity.Permissions;
-                if (permissions.Contains("administrator"))
-                {
-                    return Global.Forms.HandleLogin(result.Identity, true, returnurl);
-                }
-                return View("login", (object) "Authorization has failed. Contact Lokad Admins");
+               return Global.Forms.HandleLogin(result.Identity, true, returnurl);
             }
             return View("login", (object) result.ErrorMessage);
         }
