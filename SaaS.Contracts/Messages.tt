@@ -1,7 +1,7 @@
 ﻿let user = UserId UserId;
 let registration = RegistrationId RegistrationId;
 let security = SecurityId SecurityId;
-
+let customer = CustomerId CustomerId;
 
 // common
 let description = string Description;
@@ -82,3 +82,37 @@ UserUnlocked! (string unlockReason, security)
 
 DeleteUser? ()
 UserDeleted! (security)
+
+
+
+entity Registration (RegistrationId id);
+// =====================================
+using ? = ICommand<RegistrationId>;
+using ! = IEvent<RegistrationId>;
+
+RegistrationHttpHeader(string key, string value)
+
+RegistrationInfo(
+  string ContactEmail, 
+  string CustomerName, 
+  string OptionalUserIdentity,
+  string OptionalUserPassword,
+  string OptionalCompanyPhone,
+  string OptionalCompanyUrl,
+  string OptionalUserDisplay,
+  RegistrationHttpHeader[] headers,
+  DateTime CreatedUtc)
+
+CreateRegistration? (RegistrationInfo info)
+
+RegistrationFailed! (RegistrationInfo info, string[] problems)
+RegistrationCreated! (DateTime registeredUtc, CustomerInfo customer, SecurityInfo security)
+    CustomerInfo(customer, string companyName, string realName, string customerEmail, string optionalPhone, string optionalUrl)
+    SecurityInfo(security, string login, string pwd, string userDisplay, string optionalIdentity)
+
+
+
+AttachUserToRegistration? (user, string userDisplay, string token)
+UserAttachedToRegistration! (user, string userDisplay, string token)
+RegistrationSucceeded! (customer, security, user, string userDisplayName, string userToken)
+// This is not worth putting into a separate bounded context

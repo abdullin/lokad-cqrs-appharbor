@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaaS.Domain", "SaaS.Domain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaaS.Engine", "SaaS.Engine\SaaS.Engine.csproj", "{B779539D-04DD-4267-BE4B-707AA0DAF43D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl", "Tools\Dsl\Dsl.csproj", "{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,16 @@ Global
 		{B779539D-04DD-4267-BE4B-707AA0DAF43D}.Release|Mixed Platforms.Build.0 = Release|x86
 		{B779539D-04DD-4267-BE4B-707AA0DAF43D}.Release|x86.ActiveCfg = Release|x86
 		{B779539D-04DD-4267-BE4B-707AA0DAF43D}.Release|x86.Build.0 = Release|x86
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

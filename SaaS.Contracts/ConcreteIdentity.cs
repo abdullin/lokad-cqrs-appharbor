@@ -121,4 +121,6 @@ namespace Sample
         [DataMember(Order = 1)]
         public override long Id { get; protected set; }
     }
+
+
 }

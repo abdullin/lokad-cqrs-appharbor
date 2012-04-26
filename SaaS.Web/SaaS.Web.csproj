@@ -49,6 +49,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Library\Azure\Microsoft.WindowsAzure.StorageClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -98,6 +99,8 @@
   <ItemGroup>
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\SystemController.cs" />
+    <Compile Include="Models\ModelRegex.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="WebAuth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
