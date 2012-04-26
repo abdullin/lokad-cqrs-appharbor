@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using Lokad.Cqrs;
 using Lokad.Cqrs.AtomicStorage;
@@ -32,7 +33,7 @@ namespace SaaS.Engine
                 throw new InvalidOperationException("Count mismatch");
 
             var storage = new NuclearStorage(targetContainer);
-            var hashes = storage.GetSingletonOrNew<Dictionary<string, string>>();
+            var hashes = storage.GetSingletonOrNew<ProjectionHash>().Entries;
 
             var memoryProjections = projections.Select((projection, i) =>
                 {
@@ -108,13 +109,13 @@ namespace SaaS.Engine
                 SystemObserver.Notify("[warn] {0} is obsolete", name);
                 targetContainer.Reset(name);
             }
-            storage.UpdateSingletonEnforcingNew<Dictionary<string, string>>(x =>
+            storage.UpdateSingletonEnforcingNew<ProjectionHash>(x =>
                 {
-                    x.Clear();
+                    x.Entries.Clear();
 
                     foreach (var prj in memoryProjections)
                     {
-                        x[prj.bucketName] = prj.hash;
+                        x.Entries[prj.bucketName] = prj.hash;
                     }
                 });
         }
@@ -230,6 +231,18 @@ namespace SaaS.Engine
                     }
                 }
             }
+        }
+    }
+
+    [DataContract]
+    public sealed class ProjectionHash
+    {
+        [DataMember(Order = 1)]
+        public IDictionary<string, string> Entries { get; set; }
+
+        public ProjectionHash()
+        {
+            Entries = new Dictionary<string, string>();
         }
     }
 
