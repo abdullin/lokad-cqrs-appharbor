@@ -5,9 +5,14 @@
 
 #endregion
 
+using System;
+using System.Collections.Generic;
 using System.Configuration;
 using Lokad.Cqrs;
+using Lokad.Cqrs.AtomicStorage;
+using SaaS.Client;
 using SaaS.Wires;
+using Sample;
 
 namespace SaaS.Web
 {
@@ -15,24 +20,58 @@ namespace SaaS.Web
     {
         static readonly FileStorageConfig Root;
         //public static readonly HubClient Client;
-
+        public static readonly WebEndpoint Client;
         public static readonly FormsAuth Forms;
         public static readonly WebAuth Auth;
         public static readonly string CommitId;
-
+        public static readonly IDocumentStore Docs;
+        
         static Global()
         {
             CommitId = ConfigurationManager.AppSettings.Get("appharbor.commit_id");
-            Root = FileStorage.CreateConfig(@"C:\data\hub-store");
 
-            var streamer = Contracts.CreateStreamer();
-            //var routerQueue = Root.CreateQueueWriter(Topology.RouterQueue);
-            //var nuclearStorage = Root.CreateNuclear(new DocumentStrategy());
+            var settings = LoadSettings();
 
-            //Client = new HubClient(nuclearStorage, streamer, routerQueue);
+            var integrationPath = settings["DataPath"];
+            var contracts = Contracts.CreateStreamer();
+            var strategy = new DocumentStrategy();
+            if (integrationPath.StartsWith("file:"))
+            {
+                var path = integrationPath.Remove(0, 5);
+                var config = FileStorage.CreateConfig(path);
+                
+                Docs = config.CreateNuclear(strategy).Container;
+                Client = new WebEndpoint(new NuclearStorage(Docs), contracts, config.CreateQueueWriter(Topology.RouterQueue));
+            }
+            else if (integrationPath.StartsWith("azure:"))
+            {
+                var path = integrationPath.Remove(0, 6);
+                var config = AzureStorage.CreateConfig(path);
+                Docs = config.CreateNuclear(strategy).Container;
+                Client = new WebEndpoint(new NuclearStorage(Docs), contracts, config.CreateQueueWriter(Topology.RouterQueue));
+            }
+            else
+            {
+                throw new InvalidOperationException("Unsupperted environment");
+            }
 
-            //Forms = new FormsAuth(nuclearStorage.Container.GetReader<UserId, LoginView>());
-            //Auth = new AzureAuth(Client);
+         
+         
+
+            Forms = new FormsAuth(Docs.GetReader<UserId, LoginView>());
+            Auth = new WebAuth(Client);
         }
+
+        static Dictionary<string, string> LoadSettings()
+        {
+            var settings = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
+            foreach (var setting in ConfigurationManager.AppSettings.AllKeys)
+            {
+                settings[setting] = ConfigurationManager.AppSettings[setting];
+            }
+            return settings;
+
+        }
+
     }
 }

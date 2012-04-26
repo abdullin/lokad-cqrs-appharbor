@@ -51,7 +51,7 @@ namespace SaaS.Web
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            //GlobalState.InitializeSessionFromRequest();
+            GlobalState.InitializeSessionFromRequest();
         }
     }
 }

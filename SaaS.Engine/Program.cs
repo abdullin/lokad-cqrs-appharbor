@@ -42,7 +42,7 @@ namespace SaaS.Engine
             }
             else if (integrationPath.StartsWith("azure:"))
             {
-                var path = integrationPath.Remove(0, 5);
+                var path = integrationPath.Remove(0, 6);
                 var config = AzureStorage.CreateConfig(path);
                 setup.Streaming = config.CreateStreaming();
                 setup.Tapes = config.CreateTape;
