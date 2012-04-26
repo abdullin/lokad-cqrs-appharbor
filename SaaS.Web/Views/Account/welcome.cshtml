@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Start using Lokad!";
+    //ViewBag.ActiveMenuId = "home";
+}
+
+@section Head
+{
+    <style type="text/css">
+        #welcome-well p { font-size: 18px; line-height: 27px;}
+    </style>
+}
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <h1>Getting started <small>with Lokad</small></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <div class="well" id="welcome-well">
+                <p>
+                    Welcome!
+                </p>
+                
+               
+                <p>
+                    <a href="@Url.Action("index")" class="btn btn-success btn-large">Start using Lokad!</a>
+                </p>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+

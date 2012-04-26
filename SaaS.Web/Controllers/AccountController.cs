@@ -14,7 +14,13 @@ namespace SaaS.Web.Controllers
     {
         public ActionResult Index()
         {
-            return Content("OK");
+            return View("welcome");
+        }
+
+        public ActionResult Welcome()
+        {
+            return View("welcome");
+
         }
     }
 }
