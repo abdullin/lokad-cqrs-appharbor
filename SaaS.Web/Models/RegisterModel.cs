@@ -46,5 +46,4 @@ namespace SaaS.Web.Models
             return htmlHelper.ViewContext.ViewData.ModelState.IsValidField(modelName);
         }
     }
-
 }

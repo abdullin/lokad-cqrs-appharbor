@@ -101,6 +101,7 @@
     <Compile Include="Controllers\SystemController.cs" />
     <Compile Include="Models\ModelRegex.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\RegisterWaitModel.cs" />
     <Compile Include="WebAuth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
