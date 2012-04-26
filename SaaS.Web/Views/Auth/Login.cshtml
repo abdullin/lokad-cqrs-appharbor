@@ -33,7 +33,7 @@
 
             @if (!string.IsNullOrEmpty(Model))
             {
-                <div class="alert-block alert-error">
+                <div class="alert-block alert-error alert">
                     @Html.Encode(Model)
                 </div>
             }
@@ -88,6 +88,9 @@
                     <input type="submit" value="Login" class="btn span1" />
                 }
             
+            </div>
+            <div>
+                 @Html.ActionLink("Register","index","register")
             </div>
 
           
