@@ -2,6 +2,7 @@ using System;
 using System.Collections.Specialized;
 using System.Web.Mvc;
 using SaaS.Client;
+using SaaS.Client.Projections.Registration;
 using SaaS.Web.Models;
 using Sample;
 
@@ -76,6 +77,33 @@ namespace SaaS.Web.Controllers
                 Password = model.Password,
                 RealName = model.RealName
             });
+        }
+
+        public ActionResult Correct(RegisterModel model)
+        {
+            return View("index", model);
+        }
+        public ActionResult Finish(Guid id)
+        {
+            var view = Global.Client.GetView<RegistrationView>(new RegistrationId(id));
+            var reg = view.Value;
+
+
+            if (reg.Completed && !reg.HasProblems)
+            {
+                var log = SessionIdentity.Create(reg.UserDisplayName, reg.UserId, reg.UserToken, reg.SecurityId);
+                // auto-login!
+                return Global.Forms.HandleLogin(log, false, Url.Action("welcome", "account"));
+            }
+
+            throw new InvalidOperationException("Invalid reg");
+        }
+        public ActionResult CheckStatus(Guid id)
+        {
+            var view = Global.Client.GetView<RegistrationView>(new RegistrationId(id));
+            var partialViewResult = PartialView("status", view.HasValue ? view.Value : null);
+
+            return partialViewResult;
         }
 
 
