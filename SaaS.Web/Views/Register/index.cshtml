@@ -1,0 +1,126 @@
+﻿
+@model RegisterModel
+@{
+    ViewBag.Title = "Lokad, Register for Free Trial";
+    Layout = "~/Views/Shared/_AnonymousLayout.cshtml";
+}
+
+@section Head
+{
+  
+}
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <h1>Register <small>for a Free Trial</small></h1>
+
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="span4">
+            <div class="well">
+            
+                @using (Html.BeginForm("index", "register", FormMethod.Post, new { @class = "form-stacked" }))
+                {
+                    <div class="control-group @Html.ValidationBootstrapStateFor(x => x.Email)">
+                        <label class="control-label"><strong>Email</strong> for contact and login</label> 
+                        @Html.TextBoxFor(r => r.Email, new { placeholder = "john.doe@lokad.com" })
+                        <span class="help-inline"> @Html.ValidationMessageFor(r => r.Email) &nbsp; </span>
+                    </div>
+                    
+                    <div class="alert alert-info alert-block hide" id="freemailWarning">
+                        <p>
+                            Hi, you've entered a freemail, it's probably not your real business email.  
+                        </p>
+                        <p><strong>Lokad won't spam or resell your email!</strong>
+                        </p>
+                        <p>
+                            Gaining insights in the business of our 
+                            clients is the key to deliver good forecasts and insightful technical support. 
+                            You can register with this freemail, but I believe we will serve you better 
+                            if you enter your real business email.
+                        </p>
+                        <p>
+                            Best regards, <br />
+                            <strong>Matthias Steinberg, CEO of Lokad</strong>
+                        </p>
+
+                    </div>
+                    
+                    <div class="control-group @Html.ValidationBootstrapStateFor(x => x.Password)">
+                        <label><strong>Password</strong> for your account</label>
+                        @Html.PasswordFor(r => r.Password)
+                        <span class="help-inline">@Html.ValidationMessageFor(r => r.Password) &nbsp; </span>
+                    </div>
+                    <div class="control-group @Html.ValidationBootstrapStateFor(x => x.RealName)">
+                        <label class="control-label">
+                            <strong>Your Name</strong> optional
+                        </label>
+                        @Html.TextBoxFor(r => r.RealName, new { placeholder = "John Doe" })
+                        <span class="help-inline"> @Html.ValidationMessageFor(r => r.RealName) &nbsp; </span>
+                    </div>
+                    <div class="control-group @Html.ValidationBootstrapStateFor(x => x.CompanyName)">
+                        <label class="control-label">
+                            <strong>Company Name</strong> for account
+                        </label>
+                        @Html.TextBoxFor(r => r.CompanyName, new { placeholder = "Lokad Corp" })
+                        <span class="help-inline"> @Html.ValidationMessageFor(r => r.CompanyName) &nbsp; </span>
+                    </div>
+                    
+                    
+              
+                    <div class="control-group @Html.ValidationBootstrapStateFor(x => x.ContactPhone)">
+                        <label class="control-label">
+                            <strong>Contact Phone</strong> is optional</label>
+                        @Html.EditorFor(r => r.ContactPhone)
+                        <span class="help-inline">@Html.ValidationMessageFor(r => r.ContactPhone) &nbsp; </span>
+                    </div>
+
+                    <div class="actions">
+                        <input id="submit" type="submit" value="Start Free Trial" class="btn btn-success btn-large" />
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="span6 offset1">
+
+            
+            <h2>Get demand forecasts from the web</h2>
+            <div style="padding-top: 40px">
+                <blockquote>
+                    <p style="font-size: 24px; font-style: italic; line-height: 30px;">
+                        Lokad improved the accuracy of our planning process significantly. 
+                        The immediate impact was a stock reduction of almost 1 million &euro; 
+                        at a monthly cost of 150&euro;. 
+                    </p>
+                    <small style="font-size: 16px;padding-top: 10px;">
+                        Thomas Bremont, Head of Supply Chain Bizline
+                    </small>
+                </blockquote>
+            </div>
+            
+            <div style="padding-top: 40px">
+                <blockquote>
+                    <p style="font-size: 24px; font-style: italic; line-height: 30px;">
+                        We are very satisfied with the features and flexibility of Salescast. 
+                        We have been using Lokad's services in our e-commerce business and plan
+                         to extend them to our wholesale business.
+                    </p>
+                    <small style="font-size: 16px;padding-top: 10px;">
+                        Ville Salomäki, CEO of Ecodeal.com
+                    </small>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

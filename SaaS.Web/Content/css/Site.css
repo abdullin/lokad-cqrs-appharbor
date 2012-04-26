@@ -1,3 +1,5 @@
+/* Custom footer */
+
 .footer {
   margin-top: 45px;
   padding: 35px 0 36px;
@@ -7,6 +9,7 @@
   margin-bottom: 0;
   color: #555;
 }
-section {
-  padding-top: 60px;
+/* Required for the nav bar to be fixed on top*/
+body {
+    padding-top: 40px;
 }

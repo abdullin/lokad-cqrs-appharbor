@@ -1,4 +1,7 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.Linq.Expressions;
+using System.Web.Mvc;
 
 namespace SaaS.Web.Models
 {
@@ -24,4 +27,24 @@ namespace SaaS.Web.Models
 
         
     }
+
+    public static class Extensions
+    {
+        public static MvcHtmlString ValidationBootstrapStateFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression)
+        {
+            return new MvcHtmlString(htmlHelper.IsModelValid(expression) ? "" : "error");
+        }
+
+
+
+        public static bool IsModelValid<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression)
+        {
+            var text = ExpressionHelper.GetExpressionText(expression);
+            string modelName = htmlHelper.ViewContext.ViewData.TemplateInfo.GetFullHtmlFieldName(text);
+
+
+            return htmlHelper.ViewContext.ViewData.ModelState.IsValidField(modelName);
+        }
+    }
+
 }
