@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl", "Tools\Dsl\Dsl.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audit", "Tools\Audit\Audit.csproj", "{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTests", "Tools\SimpleTests\SimpleTests.csproj", "{861D2282-FC25-424A-BA0C-84FFC3798C51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,16 @@ Global
 		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Release|x86.ActiveCfg = Release|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
