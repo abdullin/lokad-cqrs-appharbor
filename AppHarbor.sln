@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaaS.Engine", "SaaS.Engine\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl", "Tools\Dsl\Dsl.csproj", "{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audit", "Tools\Audit\Audit.csproj", "{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,16 @@ Global
 		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2CD8DF0F-5CEF-4938-BC26-B3446D2B3044}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BC973EC1-80D2-4F06-A078-0A7E44E3AE8C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
