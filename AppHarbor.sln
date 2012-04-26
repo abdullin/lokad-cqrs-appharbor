@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audit", "Tools\Audit\Audit.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTests", "Tools\SimpleTests\SimpleTests.csproj", "{861D2282-FC25-424A-BA0C-84FFC3798C51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaaS.Domain.Tests", "SaaS.Domain.Tests\SaaS.Domain.Tests.csproj", "{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,16 @@ Global
 		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{861D2282-FC25-424A-BA0C-84FFC3798C51}.Release|x86.ActiveCfg = Release|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

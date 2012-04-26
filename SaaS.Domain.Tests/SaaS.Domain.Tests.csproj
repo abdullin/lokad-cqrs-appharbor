@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{861D2282-FC25-424A-BA0C-84FFC3798C51}</ProjectGuid>
+    <ProjectGuid>{6851BB9D-1A9B-4CAB-9424-79D07992D9C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sample</RootNamespace>
-    <AssemblyName>SimpleTests</AssemblyName>
+    <AssemblyName>Sample.Domain.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,46 +31,48 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\..\..\Library\NUnit\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aggregates\Security\add_permission_to_security_item.cs" />
+    <Compile Include="Aggregates\Security\add_security_identity.cs" />
+    <Compile Include="Aggregates\Security\add_security_password.cs" />
+    <Compile Include="Aggregates\Security\create_security_from_registration.cs" />
+    <Compile Include="Aggregates\Security\remove_security_item.cs" />
+    <Compile Include="Aggregates\Security\security_spec.cs" />
+    <Compile Include="Aggregates\Security\update_security_item_display_name.cs" />
+    <Compile Include="Aggregates\TestIdentityService.cs" />
+    <Compile Include="Aggregates\TestUserIndexService.cs" />
+    <Compile Include="Aggregates\User\create_user.cs" />
+    <Compile Include="Aggregates\User\delete_user.cs" />
+    <Compile Include="Aggregates\User\lock_user.cs" />
+    <Compile Include="Aggregates\User\report_login_success.cs" />
+    <Compile Include="Aggregates\User\report_user_login_failure.cs" />
+    <Compile Include="Aggregates\User\unlock_user.cs" />
+    <Compile Include="Aggregates\User\user_spec.cs" />
+    <Compile Include="DocumentedFixture.cs" />
+    <Compile Include="ExtendTimeSpan.cs" />
+    <Compile Include="TestPassword.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AggregateAssertion.cs" />
-    <Compile Include="AggregateSpecification.cs" />
-    <Compile Include="CompareObjects.cs" />
-    <Compile Include="FailingSpecification.cs" />
-    <Compile Include="PAssert\Annotations.cs" />
-    <Compile Include="PAssert\Extensions.cs" />
-    <Compile Include="PAssert\Infrastructure\ExpressionParser.cs" />
-    <Compile Include="PAssert\Infrastructure\NaturalExpressionProcessor.cs" />
-    <Compile Include="PAssert\Infrastructure\NodeFormatter.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\ArrayIndexNode.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\BinaryNode.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\ConditionalNode.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\ConstantNode.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\MemberAccessNode.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\MethodCallNode.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\NewArrayNode.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\Node.cs" />
-    <Compile Include="PAssert\Infrastructure\Nodes\UnaryNode.cs" />
-    <Compile Include="PAssert\Infrastructure\Util.Generated.cs" />
-    <Compile Include="PAssert\PAssert.cs" />
-    <Compile Include="SimpleTests.cs" />
-    <Compile Include="Specs.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\SaaS.Contracts\SaaS.Contracts.csproj">
+    <ProjectReference Include="..\Tools\SimpleTests\SimpleTests.csproj">
+      <Project>{861D2282-FC25-424A-BA0C-84FFC3798C51}</Project>
+      <Name>SimpleTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaaS.Contracts\SaaS.Contracts.csproj">
       <Project>{2A4A9A2C-5D8D-4078-B118-02A1D386A9FA}</Project>
       <Name>SaaS.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaaS.Domain\SaaS.Domain.csproj">
+      <Project>{85F10E26-B454-4719-9ADD-A8CD147B0AE4}</Project>
+      <Name>SaaS.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

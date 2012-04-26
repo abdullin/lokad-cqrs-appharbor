@@ -112,4 +112,22 @@ namespace Sample
             SerializationInfo info,
             StreamingContext context) : base(info, context) {}
     }
+
+    public interface IUserIndexService
+    {
+        bool IsLoginRegistered(string email);
+        bool IsIdentityRegistered(string identity);
+    }
+
+
+    public interface IMailSender
+    {
+        void EnqueueText(Email[] to, string subject, string body, Email replyTo = null);
+        void EnqueueHtml(Email[] to, string subject, string body, Email replyTo = null);
+    }
+
+    public interface IDomainIdentityService
+    {
+        long GetId();
+    }
 }

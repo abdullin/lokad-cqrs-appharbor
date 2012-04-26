@@ -46,7 +46,6 @@
     <Compile Include="Aggregates\Security\SecurityState.cs" />
     <Compile Include="Aggregates\User\UserApplicationService.cs" />
     <Compile Include="Aggregates\User\UserState.cs" />
-    <Compile Include="Current.cs" />
     <Compile Include="DomainBoundedContext.cs" />
     <Compile Include="DomainIdentityGenerator.cs" />
     <Compile Include="Aggregates\User\UserAggregate.cs" />
