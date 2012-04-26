@@ -38,6 +38,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aggregates\Register\RegistrationAggregate.cs" />
+    <Compile Include="Aggregates\Register\RegistrationApplicationService.cs" />
+    <Compile Include="Aggregates\Register\RegistrationState.cs" />
     <Compile Include="Aggregates\Security\SecurityAggregate.cs" />
     <Compile Include="Aggregates\Security\SecurityApplicationService.cs" />
     <Compile Include="Aggregates\Security\SecurityState.cs" />
@@ -48,6 +51,7 @@
     <Compile Include="DomainIdentityGenerator.cs" />
     <Compile Include="Aggregates\User\UserAggregate.cs" />
     <Compile Include="Maybe.cs" />
+    <Compile Include="Processes\RegistrationReceptor.cs" />
     <Compile Include="Processes\ReplicationProcess.cs" />
     <Compile Include="PasswordGenerator.cs" />
     <Compile Include="RedirectToWhen.cs" />

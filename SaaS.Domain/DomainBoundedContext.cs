@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Hub.ApplicationServices.Registration;
 using Lokad.Cqrs;
 using Lokad.Cqrs.AtomicStorage;
 using Sample.Aggregates.Security;
@@ -40,6 +41,7 @@ namespace Sample
         {
             var flow = new DomainSender(service);
             yield return new ReplicationReceptor(flow);
+            yield return new RegistrationReceptor(flow);
             // more senders go here
         }
 
@@ -53,7 +55,7 @@ namespace Sample
 
             yield return new UserApplicationService(store);
             yield return new SecurityApplicationService(store, id, passwords, unique);
-
+            yield return new RegistrationApplicationService(store, id, unique, passwords);
             yield return id;
         }
     }
