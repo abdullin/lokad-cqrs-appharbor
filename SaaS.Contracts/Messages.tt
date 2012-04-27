@@ -85,7 +85,6 @@ DeleteUser? ()
 UserDeleted! (security)
 
 
-
 entity Registration (RegistrationId id);
 // =====================================
 using ? = ICommand<RegistrationId>;

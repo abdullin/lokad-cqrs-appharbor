@@ -79,7 +79,6 @@ namespace SaaS.Wires
             // we wire envelope contents to both direct message call and sourced call (with date wrapper)
             var content = aem.Items[0].Content;
             functions.InvokeEvent(content);
-            functions.InvokeEvent(Source.For(aem.EnvelopeId, aem.CreatedOnUtc, (ISampleEvent)content));
         }
 
         static void CallHandlers(RedirectToCommand serviceCommands, ImmutableEnvelope aem)
