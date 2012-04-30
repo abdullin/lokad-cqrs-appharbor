@@ -1,4 +1,4 @@
-namespace Sample.Processes
+namespace SaaS.Processes
 {
     public sealed class RegistrationReceptor
     {

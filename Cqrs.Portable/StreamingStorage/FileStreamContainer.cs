@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Lokad.Cqrs.StreamingStorage
+namespace SaaS.StreamingStorage
 {
     /// <summary>
     /// Storage container using <see cref="System.IO"/> for persisting data

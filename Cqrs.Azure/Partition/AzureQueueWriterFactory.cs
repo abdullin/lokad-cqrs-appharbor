@@ -6,9 +6,9 @@
 #endregion
 
 using System.Collections.Concurrent;
-using Lokad.Cqrs.Partition;
+using SaaS.Partition;
 
-namespace Lokad.Cqrs.Feature.AzurePartition.Sender
+namespace Lokad.Cqrs.Partition
 {
     public sealed class AzureQueueWriterFactory : IQueueWriterFactory
     {

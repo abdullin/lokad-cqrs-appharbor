@@ -9,7 +9,7 @@ using System;
 using System.IO;
 using System.Threading;
 
-namespace Lokad.Cqrs.Partition
+namespace SaaS.Partition
 {
     public sealed class FileQueueWriter : IQueueWriter
     {

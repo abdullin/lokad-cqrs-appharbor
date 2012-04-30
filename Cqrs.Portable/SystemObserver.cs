@@ -9,7 +9,7 @@ using System;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     public static class SystemObserver
     {

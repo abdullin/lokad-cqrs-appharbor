@@ -9,15 +9,14 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Hub.ApplicationServices.Registration;
-using Lokad.Cqrs;
-using Lokad.Cqrs.AtomicStorage;
-using Sample.Aggregates.Security;
-using Sample.Aggregates.User;
-using Sample.Processes;
-using Sample.Services.UserIndex;
+using SaaS.Aggregates.Register;
+using SaaS.Aggregates.Security;
+using SaaS.Aggregates.User;
+using SaaS.AtomicStorage;
+using SaaS.Processes;
+using SaaS.Services.UserIndex;
 
-namespace Sample
+namespace SaaS
 {
     public static class DomainBoundedContext
     {

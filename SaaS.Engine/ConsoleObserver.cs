@@ -2,8 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Text;
 using Lokad.Cqrs;
-using Lokad.Cqrs.Envelope.Events;
-using Sample;
+using SaaS.Envelope.Events;
 using ServiceStack.Text;
 
 namespace SaaS.Engine

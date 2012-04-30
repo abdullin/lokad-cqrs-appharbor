@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Lokad.Cqrs.AtomicStorage
+namespace SaaS.AtomicStorage
 {
     public interface IDocumentReader<in TKey, TView>
     {

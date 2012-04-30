@@ -8,7 +8,7 @@
 using System;
 using System.Reflection;
 
-namespace Lokad.Cqrs.Evil
+namespace SaaS.Evil
 {
     /// <summary>
     /// One of these evil utility classes to filter out quickly some common non-user assemblies (this speeds assembly scans)

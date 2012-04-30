@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Lokad.Cqrs.AtomicStorage
+namespace SaaS.AtomicStorage
 {
     public static class ExtendDocumentWriter
     {

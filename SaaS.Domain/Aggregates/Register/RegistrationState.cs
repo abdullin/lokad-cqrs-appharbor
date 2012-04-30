@@ -7,7 +7,7 @@
 
 using System.Collections.Generic;
 
-namespace Sample.Aggregates.Register
+namespace SaaS.Aggregates.Register
 {
     public sealed class RegistrationState : IRegistrationState
     {

@@ -9,7 +9,7 @@ using System;
 using System.IO;
 using System.Runtime.Remoting;
 
-namespace Lokad.Cqrs.Feature.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     sealed class SuppressFlushForStream : Stream
     {

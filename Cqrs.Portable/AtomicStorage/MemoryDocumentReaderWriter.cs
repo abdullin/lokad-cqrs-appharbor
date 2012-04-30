@@ -9,7 +9,7 @@ using System;
 using System.Collections.Concurrent;
 using System.IO;
 
-namespace Lokad.Cqrs.AtomicStorage
+namespace SaaS.AtomicStorage
 {
     public sealed class MemoryDocumentReaderWriter<TKey, TEntity> : IDocumentReader<TKey, TEntity>,
                                                                     IDocumentWriter<TKey, TEntity>

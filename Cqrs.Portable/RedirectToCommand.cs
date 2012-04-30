@@ -11,7 +11,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     public sealed class RedirectToCommand : HideObjectMembersFromIntelliSense
     {

@@ -10,7 +10,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Lokad.Cqrs.AtomicStorage
+namespace SaaS.AtomicStorage
 {
     public sealed class MemoryDocumentStore : IDocumentStore
     {

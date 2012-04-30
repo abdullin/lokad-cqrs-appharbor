@@ -6,9 +6,9 @@
 #endregion
 
 using System;
-using Lokad.Cqrs.Envelope;
+using SaaS.Envelope;
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     /// <summary>
     /// Is responsible for reading-writing message envelopes either as

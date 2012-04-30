@@ -1,10 +1,8 @@
 using System;
 using System.Linq;
-using Lokad.Cqrs;
-using Lokad.Cqrs.Envelope;
-using Lokad.Cqrs.Partition;
-using Lokad.Cqrs.TapeStorage;
-using Sample;
+using SaaS.Envelope;
+using SaaS.Partition;
+using SaaS.TapeStorage;
 
 namespace SaaS.Wires
 {

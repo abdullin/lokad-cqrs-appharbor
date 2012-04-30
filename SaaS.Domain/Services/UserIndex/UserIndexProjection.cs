@@ -7,9 +7,9 @@
 
 using System.Security.Cryptography;
 using System.Text;
-using Lokad.Cqrs.AtomicStorage;
+using SaaS.AtomicStorage;
 
-namespace Sample.Services.UserIndex
+namespace SaaS.Services.UserIndex
 {
     public sealed class UserIndexProjection
     {

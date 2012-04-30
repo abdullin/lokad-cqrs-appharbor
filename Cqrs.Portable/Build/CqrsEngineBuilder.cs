@@ -9,11 +9,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Lokad.Cqrs.Dispatch;
-using Lokad.Cqrs.Envelope;
-using Lokad.Cqrs.Partition;
+using SaaS.Dispatch;
+using SaaS.Envelope;
+using SaaS.Partition;
 
-namespace Lokad.Cqrs.Build
+namespace SaaS.Build
 {
     public sealed class CqrsEngineBuilder : HideObjectMembersFromIntelliSense
     {

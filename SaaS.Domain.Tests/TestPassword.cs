@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Sample
+namespace SaaS
 {
     public sealed class TestPassword : PasswordGenerator
     {

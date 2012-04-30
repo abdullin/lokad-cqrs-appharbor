@@ -4,15 +4,14 @@ using System.IO;
 using System.Linq;
 using Microsoft.WindowsAzure.StorageClient;
 
-namespace Lokad.Cqrs.Feature.TapeStorage
-{
-    using PageDataLengthType = Int16; // Same as in PageBlobReadStream
+namespace Lokad.Cqrs.TapeStorage
+{ // Same as in PageBlobReadStream
 
     public class PageBlobAppendStream : Stream
     {
-        public const PageDataLengthType PageSize = 512;
-        public const PageDataLengthType SizeOfPageDataSize = sizeof(PageDataLengthType);
-        public const PageDataLengthType PageDataSize = PageSize - SizeOfPageDataSize;
+        public const Int16 PageSize = 512;
+        public const Int16 SizeOfPageDataSize = sizeof(Int16);
+        public const Int16 PageDataSize = PageSize - SizeOfPageDataSize;
 
         readonly CloudPageBlob _blob;
 
@@ -77,7 +76,7 @@ namespace Lokad.Cqrs.Feature.TapeStorage
 
             do
             {
-                var bytesToWrite = (PageDataLengthType) Math.Min(rest, page.FreeSpace);
+                var bytesToWrite = (Int16) Math.Min(rest, page.FreeSpace);
                 rest -= bytesToWrite;
 
                 page.Append(buffer, bufferOffset, bytesToWrite);
@@ -193,12 +192,12 @@ namespace Lokad.Cqrs.Feature.TapeStorage
 
             public short Length { get; private set; }
 
-            public PageDataLengthType FreeSpace
+            public Int16 FreeSpace
             {
-                get { return (PageDataLengthType)(PageDataSize - Length); }
+                get { return (Int16)(PageDataSize - Length); }
             }
 
-            public void Append(byte[] buffer, int offset, PageDataLengthType count)
+            public void Append(byte[] buffer, int offset, Int16 count)
             {
                 if (Length + count > PageDataSize)
                     throw new ArgumentOutOfRangeException("count");

@@ -8,7 +8,7 @@
 using System;
 using System.ComponentModel;
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     /// <summary>
     /// Helper class for creating fluent APIs, that hides unused signatures

@@ -11,7 +11,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace Sample
+namespace SaaS
 {
     public static class Describe
     {

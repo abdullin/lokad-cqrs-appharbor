@@ -1,8 +1,8 @@
 using System;
 using System.Text;
-using Lokad.Cqrs.Envelope;
+using SaaS.Envelope;
 
-namespace Lokad.Cqrs.Feature.AzurePartition
+namespace Lokad.Cqrs.Partition
 {
     public static class AzureMessageOverflows
     {

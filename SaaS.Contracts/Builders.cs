@@ -2,7 +2,7 @@ using System;
 using System.Collections.Specialized;
 using System.Linq;
 
-namespace Sample
+namespace SaaS
 {
     public sealed class RegistrationInfoBuilder
     {

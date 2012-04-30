@@ -3,16 +3,15 @@ using System.ComponentModel;
 using System.IO;
 using Microsoft.WindowsAzure.StorageClient;
 
-namespace Lokad.Cqrs.Feature.TapeStorage
-{
-    using PageDataLengthType = Int16; // Same as in PageBlobAppendStream
+namespace Lokad.Cqrs.TapeStorage
+{ // Same as in PageBlobAppendStream
 
     public class PageBlobReadStream : Stream
     {
         readonly CloudPageBlob _blob;
         readonly BinaryReader _reader;
         long _pageIndex;
-        PageDataLengthType _offset;
+        Int16 _offset;
 
         public PageBlobReadStream(CloudPageBlob blob)
         {
@@ -93,7 +92,7 @@ namespace Lokad.Cqrs.Feature.TapeStorage
                     if (_offset != 0)
                         pageReader.ReadBytes(_offset);
 
-                    var bytesToRead = (PageDataLengthType) (Math.Min(_offset + rest, pageDataSize) - _offset);
+                    var bytesToRead = (Int16) (Math.Min(_offset + rest, pageDataSize) - _offset);
                     rest -= bytesToRead;
 
                     var bytes = pageReader.ReadBytes(bytesToRead);
@@ -168,7 +167,7 @@ namespace Lokad.Cqrs.Feature.TapeStorage
             {
                 long offset;
                 _pageIndex = Math.DivRem(value, PageBlobAppendStream.PageDataSize, out offset);
-                _offset = (PageDataLengthType) offset;
+                _offset = (Int16) offset;
             }
         }
     }

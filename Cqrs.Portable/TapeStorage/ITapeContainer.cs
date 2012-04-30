@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Lokad.Cqrs.TapeStorage
+namespace SaaS.TapeStorage
 {
     /// <summary>
     /// Factory for storing blocks of data into append-only storage,

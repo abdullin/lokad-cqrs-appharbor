@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Sample
+namespace SaaS
 {
     /// <summary>
     /// Methods to describe messages related to <see cref="IUserAggregate"/>. They are auto-wired by

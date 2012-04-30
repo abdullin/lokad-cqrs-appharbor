@@ -10,7 +10,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using SaaS.Client;
-using Sample;
+using SaaS.Client.Projections.LoginIndex;
+using SaaS.Client.Projections.LoginView;
 
 namespace SaaS.Web
 {

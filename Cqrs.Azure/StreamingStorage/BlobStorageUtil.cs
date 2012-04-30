@@ -5,16 +5,7 @@
 
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.IO;
-using System.IO.Compression;
-using System.Security.Cryptography;
-using Lokad.Cqrs.StreamingStorage;
-using Microsoft.WindowsAzure.StorageClient;
-
-namespace Lokad.Cqrs.Feature.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     static class BlobStorageUtil
     {

@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Sample
+namespace SaaS
 {
     static class DescribeSecurity
     {

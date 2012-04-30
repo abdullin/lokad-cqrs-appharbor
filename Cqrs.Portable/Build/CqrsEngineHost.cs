@@ -11,9 +11,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Lokad.Cqrs.Build.Events;
+using SaaS.Build.Events;
 
-namespace Lokad.Cqrs.Build
+namespace SaaS.Build
 {
     public sealed class CqrsEngineHost : IDisposable
     {

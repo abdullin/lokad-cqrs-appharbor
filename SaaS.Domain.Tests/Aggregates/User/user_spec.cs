@@ -7,7 +7,9 @@
 
 // ReSharper disable InconsistentNaming
 
-namespace Sample.Aggregates.User
+using Sample;
+
+namespace SaaS.Aggregates.User
 {
     public sealed class user_spec : AggregateSpecification<UserId>
     {

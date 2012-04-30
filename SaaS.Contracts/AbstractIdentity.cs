@@ -7,7 +7,7 @@
 
 using System.Runtime.Serialization;
 
-namespace Sample
+namespace SaaS
 {
     /// <summary>
     /// Strongly-typed identity class. Essentially just an ID with a 

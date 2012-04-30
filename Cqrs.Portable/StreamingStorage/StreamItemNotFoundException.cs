@@ -8,7 +8,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Lokad.Cqrs.StreamingStorage
+namespace SaaS.StreamingStorage
 {
     [Serializable]
     public class StreamItemNotFoundException : StreamBaseException

@@ -18,16 +18,11 @@
 #pragma warning disable 1591
 
 
-using System.Collections.Generic;
+using System.Diagnostics;
 using Antlr.Runtime;
-using Antlr.Runtime.Misc;
-using ConditionalAttribute = System.Diagnostics.ConditionalAttribute;
-
-
 using Antlr.Runtime.Tree;
-using RewriteRuleITokenStream = Antlr.Runtime.Tree.RewriteRuleTokenStream;
 
-namespace  MessageContracts 
+namespace Hub.Dsl 
 {
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "3.4")]
 [System.CLSCompliant(false)]
@@ -402,10 +397,10 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	    object ID9_tree = default(object);
 	    object ID10_tree = default(object);
 	    object char_literal11_tree = default(object);
-	    RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-	    RewriteRuleITokenStream stream_LET=new RewriteRuleITokenStream(adaptor,"token LET");
-	    RewriteRuleITokenStream stream_26=new RewriteRuleITokenStream(adaptor,"token 26");
-	    RewriteRuleITokenStream stream_27=new RewriteRuleITokenStream(adaptor,"token 27");
+	    RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
+	    RewriteRuleTokenStream stream_LET=new RewriteRuleTokenStream(adaptor,"token LET");
+	    RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
+	    RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
 
 		try { DebugEnterRule(GrammarFileName, "frag_declaration");
 		DebugLocation(38, 52);
@@ -539,12 +534,12 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	    object char_literal16_tree = default(object);
 	    object ID17_tree = default(object);
 	    object char_literal18_tree = default(object);
-	    RewriteRuleITokenStream stream_USING=new RewriteRuleITokenStream(adaptor,"token USING");
-	    RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-	    RewriteRuleITokenStream stream_Modifier=new RewriteRuleITokenStream(adaptor,"token Modifier");
-	    RewriteRuleITokenStream stream_25=new RewriteRuleITokenStream(adaptor,"token 25");
-	    RewriteRuleITokenStream stream_26=new RewriteRuleITokenStream(adaptor,"token 26");
-	    RewriteRuleITokenStream stream_27=new RewriteRuleITokenStream(adaptor,"token 27");
+	    RewriteRuleTokenStream stream_USING=new RewriteRuleTokenStream(adaptor,"token USING");
+	    RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
+	    RewriteRuleTokenStream stream_Modifier=new RewriteRuleTokenStream(adaptor,"token Modifier");
+	    RewriteRuleTokenStream stream_25=new RewriteRuleTokenStream(adaptor,"token 25");
+	    RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
+	    RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
 
 		try { DebugEnterRule(GrammarFileName, "modifier_declaration");
 		DebugLocation(41, 76);
@@ -716,9 +711,9 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	    object ENTITY19_tree = default(object);
 	    object ID20_tree = default(object);
 	    object char_literal22_tree = default(object);
-	    RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-	    RewriteRuleITokenStream stream_26=new RewriteRuleITokenStream(adaptor,"token 26");
-	    RewriteRuleITokenStream stream_ENTITY=new RewriteRuleITokenStream(adaptor,"token ENTITY");
+	    RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
+	    RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
+	    RewriteRuleTokenStream stream_ENTITY=new RewriteRuleTokenStream(adaptor,"token ENTITY");
 	    RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
 		try { DebugEnterRule(GrammarFileName, "entity_declaration");
 		DebugLocation(45, 54);
@@ -835,8 +830,8 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 
 	    object ID23_tree = default(object);
 	    object Modifier24_tree = default(object);
-	    RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-	    RewriteRuleITokenStream stream_Modifier=new RewriteRuleITokenStream(adaptor,"token Modifier");
+	    RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
+	    RewriteRuleTokenStream stream_Modifier=new RewriteRuleTokenStream(adaptor,"token Modifier");
 	    RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
 		try { DebugEnterRule(GrammarFileName, "type_declaration");
 		DebugLocation(48, 56);
@@ -995,7 +990,7 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	    object ID26_tree = default(object);
 	    object ID27_tree = default(object);
 	    object ID28_tree = default(object);
-	    RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+	    RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
 
 		try { DebugEnterRule(GrammarFileName, "member");
 		DebugLocation(51, 1);
@@ -1184,9 +1179,9 @@ public partial class MessageContractsParser : Antlr.Runtime.Parser
 	    object lc_tree = default(object);
 	    object char_literal30_tree = default(object);
 	    object char_literal32_tree = default(object);
-	    RewriteRuleITokenStream stream_23=new RewriteRuleITokenStream(adaptor,"token 23");
-	    RewriteRuleITokenStream stream_24=new RewriteRuleITokenStream(adaptor,"token 24");
-	    RewriteRuleITokenStream stream_25=new RewriteRuleITokenStream(adaptor,"token 25");
+	    RewriteRuleTokenStream stream_23=new RewriteRuleTokenStream(adaptor,"token 23");
+	    RewriteRuleTokenStream stream_24=new RewriteRuleTokenStream(adaptor,"token 24");
+	    RewriteRuleTokenStream stream_25=new RewriteRuleTokenStream(adaptor,"token 25");
 	    RewriteRuleSubtreeStream stream_member=new RewriteRuleSubtreeStream(adaptor,"rule member");
 		try { DebugEnterRule(GrammarFileName, "block");
 		DebugLocation(57, 4);

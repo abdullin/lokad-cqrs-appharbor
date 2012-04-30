@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Sample.Aggregates.User
+namespace SaaS.Aggregates.User
 {
     public sealed class UserAggregate
     {

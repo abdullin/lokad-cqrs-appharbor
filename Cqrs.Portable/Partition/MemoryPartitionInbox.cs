@@ -8,7 +8,7 @@
 using System.Collections.Concurrent;
 using System.Threading;
 
-namespace Lokad.Cqrs.Partition
+namespace SaaS.Partition
 {
     /// <summary>
     /// In-memory implementation of <see cref="IPartitionInbox"/> that uses concurrency primitives

@@ -7,7 +7,7 @@
 
 using System.IO;
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     public sealed class FileStorageConfig
     {

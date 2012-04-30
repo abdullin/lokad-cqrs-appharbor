@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using Lokad.Cqrs.TapeStorage;
 using Microsoft.WindowsAzure.StorageClient;
+using SaaS.TapeStorage;
 
-namespace Lokad.Cqrs.Feature.TapeStorage
+namespace Lokad.Cqrs.TapeStorage
 {
     public class BlockBlobTapeStream : ITapeStream
     {

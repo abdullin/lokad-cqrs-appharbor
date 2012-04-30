@@ -9,6 +9,7 @@
 using System;
 using System.IO;
 using Microsoft.WindowsAzure.StorageClient;
+using SaaS.AtomicStorage;
 
 namespace Lokad.Cqrs.AtomicStorage
 {

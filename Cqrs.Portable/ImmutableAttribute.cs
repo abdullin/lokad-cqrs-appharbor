@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     public sealed class ImmutableAttribute
     {

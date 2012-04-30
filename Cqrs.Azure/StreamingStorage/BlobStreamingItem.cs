@@ -5,13 +5,12 @@
 
 #endregion
 
-using System;
 using System.IO;
 using System.IO.Compression;
-using Lokad.Cqrs.StreamingStorage;
 using Microsoft.WindowsAzure.StorageClient;
+using SaaS.StreamingStorage;
 
-namespace Lokad.Cqrs.Feature.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     /// <summary>
     /// Azure BLOB implementation of the <see cref="IStreamItem"/>

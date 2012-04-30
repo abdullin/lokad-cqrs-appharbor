@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Sample.Aggregates.User
+namespace SaaS.Aggregates.User
 {
     public sealed class UserApplicationService : IUserApplicationService, IApplicationService
     {

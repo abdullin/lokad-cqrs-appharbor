@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Lokad.Cqrs.TapeStorage
+namespace SaaS.TapeStorage
 {
     public sealed class TapeStorageInitilization : IEngineProcess
     {

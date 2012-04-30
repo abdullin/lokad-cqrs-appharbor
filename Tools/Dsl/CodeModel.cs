@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.Specialized;
 
-namespace Lokad.CodeDsl
+namespace Hub.Dsl
 {
 	public sealed class Context
 	{

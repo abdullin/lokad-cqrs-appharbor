@@ -8,7 +8,7 @@
 using System;
 using System.Threading;
 
-namespace Lokad.Cqrs.Partition
+namespace SaaS.Partition
 {
     /// <summary>
     /// Polling file-based implementation of <see cref="IPartitionInbox"/>

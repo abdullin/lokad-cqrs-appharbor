@@ -18,12 +18,10 @@
 #pragma warning disable 1591
 
 
-using System.Collections.Generic;
+using System.Diagnostics;
 using Antlr.Runtime;
-using Antlr.Runtime.Misc;
-using ConditionalAttribute = System.Diagnostics.ConditionalAttribute;
 
-namespace  MessageContracts 
+namespace Hub.Dsl 
 {
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "3.4")]
 [System.CLSCompliant(false)]

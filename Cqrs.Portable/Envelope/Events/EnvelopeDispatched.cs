@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Lokad.Cqrs.Envelope.Events
+namespace SaaS.Envelope.Events
 {
     [Serializable]
     public sealed class EnvelopeDispatched : ISystemEvent

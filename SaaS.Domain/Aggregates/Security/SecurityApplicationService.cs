@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Sample.Aggregates.Security
+namespace SaaS.Aggregates.Security
 {
     public sealed class SecurityApplicationService : ISecurityApplicationService, IApplicationService
     {

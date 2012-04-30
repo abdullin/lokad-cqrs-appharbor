@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Sample
+namespace SaaS
 {
     public static class ExtendTimeSpan
     {

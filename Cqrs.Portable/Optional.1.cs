@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     /// <summary>
     /// Helper class that indicates nullable value in a good-citizenship code and 

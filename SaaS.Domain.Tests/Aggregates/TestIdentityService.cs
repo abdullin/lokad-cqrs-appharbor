@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Sample.Aggregates
+namespace SaaS.Aggregates
 {
     public sealed class TestIdentityService : IDomainIdentityService
     {

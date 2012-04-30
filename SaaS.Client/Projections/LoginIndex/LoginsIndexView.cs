@@ -8,11 +8,9 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Lokad.Cqrs;
-using Lokad.Cqrs.AtomicStorage;
-using Sample;
+using SaaS.AtomicStorage;
 
-namespace SaaS.Client
+namespace SaaS.Client.Projections.LoginIndex
 {
     [DataContract(Name = "new-login-index")]
     public sealed class LoginsIndexView

@@ -13,7 +13,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Lokad.Cqrs.TapeStorage
+namespace SaaS.TapeStorage
 {
     public class TapeStreamSerializer
     {

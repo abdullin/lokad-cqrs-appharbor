@@ -9,7 +9,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Sample
+namespace SaaS
 {
     /// <summary>
     /// Class that makes login authentication compatible with ASP.NET SqlMembership.

@@ -8,7 +8,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Lokad.Cqrs.Envelope
+namespace SaaS.Envelope
 {
     [DataContract(Namespace = "Lokad.Cqrs.v2", Name = "Envelope"), Serializable]
     public sealed class EnvelopeContract

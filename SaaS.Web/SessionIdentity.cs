@@ -8,11 +8,11 @@
 using System;
 using System.Collections.Generic;
 using System.Security.Principal;
-using Sample;
-using IIdentity = System.Security.Principal.IIdentity;
 
 namespace SaaS.Web
 {
+    using IIdentity = System.Security.Principal.IIdentity;
+
     public sealed class SessionIdentity
     {
         public readonly UserId User;

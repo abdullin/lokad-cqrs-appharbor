@@ -8,9 +8,9 @@
 using System;
 using System.Threading;
 using System.Linq;
-using Lokad.Cqrs.Partition;
+using SaaS.Partition;
 
-namespace Lokad.Cqrs.Feature.AzurePartition.Inbox
+namespace Lokad.Cqrs.Partition
 {
     /// <summary>
     /// Polling implementation of message reciever for Azure queues

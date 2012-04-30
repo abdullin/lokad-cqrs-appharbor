@@ -8,7 +8,7 @@
 using System;
 using System.IO;
 
-namespace Lokad.Cqrs.AtomicStorage
+namespace SaaS.AtomicStorage
 {
     public interface IDocumentStrategy
     {

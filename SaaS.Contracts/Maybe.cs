@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Sample
+namespace SaaS
 {
     /// <summary>
     /// Helper class that indicates nullable value in a good-citizenship code

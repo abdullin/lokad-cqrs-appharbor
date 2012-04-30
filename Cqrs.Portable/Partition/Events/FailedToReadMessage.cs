@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Lokad.Cqrs.Partition.Events
+namespace SaaS.Partition.Events
 {
     [Serializable]
     public sealed class FailedToReadMessage : ISystemEvent

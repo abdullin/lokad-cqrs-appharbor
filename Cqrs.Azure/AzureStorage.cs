@@ -9,17 +9,15 @@
 using System;
 using System.Threading;
 using Lokad.Cqrs.AtomicStorage;
-using Lokad.Cqrs.Build;
-using Lokad.Cqrs.Envelope;
-using Lokad.Cqrs.Evil;
-using Lokad.Cqrs.Feature.AzurePartition;
-using Lokad.Cqrs.Feature.AzurePartition.Inbox;
-using Lokad.Cqrs.Feature.AzurePartition.Sender;
-using Lokad.Cqrs.Feature.StreamingStorage;
-using Lokad.Cqrs.Feature.TapeStorage;
+using Lokad.Cqrs.Partition;
 using Lokad.Cqrs.StreamingStorage;
+using Lokad.Cqrs.TapeStorage;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.StorageClient;
+using SaaS;
+using SaaS.AtomicStorage;
+using SaaS.Evil;
+using SaaS.StreamingStorage;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable MemberCanBePrivate.Global

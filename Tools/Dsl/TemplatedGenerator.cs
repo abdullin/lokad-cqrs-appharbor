@@ -2,7 +2,7 @@
 using System.CodeDom.Compiler;
 using System.Linq;
 
-namespace Lokad.CodeDsl
+namespace Hub.Dsl
 {
 	public sealed class TemplatedGenerator 
 	{

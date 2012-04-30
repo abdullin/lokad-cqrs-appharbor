@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Lokad.Cqrs.Partition
+namespace SaaS.Partition
 {
     public sealed class GetEnvelopeResult
     {

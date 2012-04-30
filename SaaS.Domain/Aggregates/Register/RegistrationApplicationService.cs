@@ -1,8 +1,6 @@
 using System;
-using Sample;
-using Sample.Aggregates.Register;
 
-namespace Hub.ApplicationServices.Registration
+namespace SaaS.Aggregates.Register
 {
     public sealed class RegistrationApplicationService : 
         IRegistrationApplicationService, IApplicationService

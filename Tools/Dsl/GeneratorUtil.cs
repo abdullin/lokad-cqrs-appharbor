@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace Lokad.CodeDsl
+namespace Hub.Dsl
 {
     public static class GeneratorUtil
     {

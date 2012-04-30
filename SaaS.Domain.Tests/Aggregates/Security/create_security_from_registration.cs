@@ -6,10 +6,11 @@
 #endregion
 
 using System;
+using Sample;
 
 // ReSharper disable InconsistentNaming
 
-namespace Sample.Aggregates.Security
+namespace SaaS.Aggregates.Security
 {
     public class create_security_from_registration : specs
     {

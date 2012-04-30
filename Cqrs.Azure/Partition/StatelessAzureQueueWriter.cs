@@ -6,11 +6,11 @@
 #endregion
 
 using System;
-using Lokad.Cqrs.Envelope;
-using Lokad.Cqrs.Partition;
 using Microsoft.WindowsAzure.StorageClient;
+using SaaS.Envelope;
+using SaaS.Partition;
 
-namespace Lokad.Cqrs.Feature.AzurePartition
+namespace Lokad.Cqrs.Partition
 {
     public sealed class StatelessAzureQueueWriter : IQueueWriter
     {

@@ -7,7 +7,7 @@
 
 using System.Collections.Generic;
 
-namespace Sample
+namespace SaaS
 {
     public interface ISampleMessage {}
 

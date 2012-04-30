@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Lokad.Cqrs;
-using Lokad.Cqrs.AtomicStorage;
-using Sample;
+using SaaS.AtomicStorage;
 
 namespace SaaS.Client.Projections.Releases
 {

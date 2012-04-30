@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Lokad.Cqrs.TapeStorage
+namespace SaaS.TapeStorage
 {
     /// <summary>
     /// <para>Persists records in a tape stream, using SHA1 hashing and "magic" number sequences

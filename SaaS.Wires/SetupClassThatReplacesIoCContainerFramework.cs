@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
-using Lokad.Cqrs;
-using Lokad.Cqrs.AtomicStorage;
-using Lokad.Cqrs.Build;
-using Lokad.Cqrs.Partition;
-using Lokad.Cqrs.StreamingStorage;
-using Lokad.Cqrs.TapeStorage;
+using SaaS.AtomicStorage;
+using SaaS.Build;
 using SaaS.Client;
-using Sample;
+using SaaS.Partition;
+using SaaS.StreamingStorage;
+using SaaS.TapeStorage;
 
 namespace SaaS.Wires
 {

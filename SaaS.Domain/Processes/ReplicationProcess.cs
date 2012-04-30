@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Sample.Processes
+namespace SaaS.Processes
 {
     /// <summary>
     /// Replicates changes between <see cref="ISecurityAggregate"/> and 

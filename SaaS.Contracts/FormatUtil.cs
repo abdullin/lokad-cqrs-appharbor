@@ -8,7 +8,7 @@
 using System;
 using System.Globalization;
 
-namespace Sample
+namespace SaaS
 {
     /// <summary>
     /// Pretty format utils

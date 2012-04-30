@@ -8,7 +8,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     public sealed class MemoryStorageConfig : HideObjectMembersFromIntelliSense
     {

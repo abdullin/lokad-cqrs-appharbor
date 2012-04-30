@@ -6,11 +6,12 @@
 #endregion
 
 using System;
+using Sample;
 
 // ReSharper disable InconsistentNaming
 // ReSharper disable FieldCanBeMadeReadOnly.Local
 
-namespace Sample.Aggregates.User
+namespace SaaS.Aggregates.User
 {
     public class create_user : specs
     {

@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Lokad.Cqrs.Envelope
+namespace SaaS.Envelope
 {
     public sealed class MessageBuilder : HideObjectMembersFromIntelliSense
     {

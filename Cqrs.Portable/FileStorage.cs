@@ -7,16 +7,16 @@
 
 using System;
 using System.IO;
-using Lokad.Cqrs.AtomicStorage;
-using Lokad.Cqrs.Evil;
-using Lokad.Cqrs.Partition;
-using Lokad.Cqrs.StreamingStorage;
-using Lokad.Cqrs.TapeStorage;
+using SaaS.AtomicStorage;
+using SaaS.Evil;
+using SaaS.Partition;
+using SaaS.StreamingStorage;
+using SaaS.TapeStorage;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable MemberCanBePrivate.Global
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     public static class FileStorage
     {

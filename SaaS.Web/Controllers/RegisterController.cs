@@ -2,9 +2,9 @@ using System;
 using System.Collections.Specialized;
 using System.Web.Mvc;
 using SaaS.Client;
+using SaaS.Client.Projections.LoginIndex;
 using SaaS.Client.Projections.Registration;
 using SaaS.Web.Models;
-using Sample;
 
 namespace SaaS.Web.Controllers
 {

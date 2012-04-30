@@ -9,7 +9,7 @@ using System;
 using System.Globalization;
 using System.IO;
 
-namespace Lokad.Cqrs.Envelope
+namespace SaaS.Envelope
 {
     public static class EnvelopePrinter
     {

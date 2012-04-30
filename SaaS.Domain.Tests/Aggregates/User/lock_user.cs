@@ -6,10 +6,11 @@
 #endregion
 
 using System;
+using Sample;
 
 // ReSharper disable InconsistentNaming
 
-namespace Sample.Aggregates.User
+namespace SaaS.Aggregates.User
 {
     public class lock_user : specs
     {

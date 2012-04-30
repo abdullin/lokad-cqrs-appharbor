@@ -7,7 +7,7 @@
 
 using System.Runtime.Serialization;
 
-namespace Sample
+namespace SaaS
 {
     [DataContract(Namespace = "Sample")]
     public class Email

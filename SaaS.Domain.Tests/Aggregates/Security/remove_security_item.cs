@@ -5,7 +5,9 @@
 
 #endregion
 
-namespace Sample.Aggregates.Security
+using Sample;
+
+namespace SaaS.Aggregates.Security
 {
     public class remove_security_item : specs
     {

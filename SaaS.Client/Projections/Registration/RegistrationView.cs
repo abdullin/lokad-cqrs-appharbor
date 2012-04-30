@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using Lokad.Cqrs.AtomicStorage;
-using Sample;
+using SaaS.AtomicStorage;
 
 namespace SaaS.Client.Projections.Registration
 {

@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Concurrent;
 
-namespace Lokad.Cqrs.Envelope
+namespace SaaS.Envelope
 {
     public sealed class MemoryQuarantine : IEnvelopeQuarantine
     {

@@ -8,10 +8,9 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Lokad.Cqrs.AtomicStorage;
-using Sample;
+using SaaS.AtomicStorage;
 
-namespace SaaS.Client
+namespace SaaS.Client.Projections.LoginView
 {
     [DataContract]
     public sealed class LoginView

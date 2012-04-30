@@ -8,10 +8,10 @@
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
-using Lokad.Cqrs.TapeStorage;
 using Microsoft.WindowsAzure.StorageClient;
+using SaaS.TapeStorage;
 
-namespace Lokad.Cqrs.Feature.TapeStorage
+namespace Lokad.Cqrs.TapeStorage
 {
     public class BlobTapeStorageFactory : ITapeContainer
     {

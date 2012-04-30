@@ -7,10 +7,8 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Sample;
-using Sample.Aggregates.Register;
 
-namespace Hub.ApplicationServices.Registration
+namespace SaaS.Aggregates.Register
 {
     public sealed class RegistrationAggregate 
     {

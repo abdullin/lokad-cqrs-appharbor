@@ -9,10 +9,10 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using Lokad.Cqrs.Dispatch.Events;
-using Lokad.Cqrs.Partition.Events;
+using SaaS.Dispatch.Events;
+using SaaS.Partition.Events;
 
-namespace Lokad.Cqrs.Partition
+namespace SaaS.Partition
 {
     public sealed class StatelessFileQueueReader
     {

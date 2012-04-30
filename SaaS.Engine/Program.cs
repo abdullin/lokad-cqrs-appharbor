@@ -7,7 +7,6 @@ using System.Security;
 using System.Threading;
 using Lokad.Cqrs;
 using SaaS.Wires;
-using Sample;
 using ServiceStack.Text;
 
 namespace SaaS.Engine

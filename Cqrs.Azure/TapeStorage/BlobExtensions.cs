@@ -3,7 +3,7 @@ using System.IO;
 using Microsoft.WindowsAzure.StorageClient;
 using Microsoft.WindowsAzure.StorageClient.Protocol;
 
-namespace Lokad.Cqrs.Feature.TapeStorage
+namespace Lokad.Cqrs.TapeStorage
 {
     public static class BlobExtensions
     {

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Lokad.Cqrs
+namespace SaaS
 {
     /// <summary>
     /// Deserialized message representation

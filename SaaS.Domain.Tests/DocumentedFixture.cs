@@ -5,9 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
-using Sample.Aggregates.Security;
+using SaaS.Aggregates.Security;
+using Sample;
 
-namespace Sample
+namespace SaaS
 {
     [TestFixture]
     public sealed class DocumentedFixture

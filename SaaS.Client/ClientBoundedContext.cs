@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Lokad.Cqrs;
-using Lokad.Cqrs.AtomicStorage;
+using SaaS.AtomicStorage;
+using SaaS.Client.Projections.LoginIndex;
+using SaaS.Client.Projections.LoginView;
 using SaaS.Client.Projections.Registration;
 using SaaS.Client.Projections.Releases;
-using Sample;
 
 namespace SaaS.Client
 {

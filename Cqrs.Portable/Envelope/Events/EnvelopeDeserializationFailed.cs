@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Lokad.Cqrs.Envelope.Events
+namespace SaaS.Envelope.Events
 {
     /// <summary>
     /// Raised when something goes wrong with the envelope deserialization (i.e.: unknown format or contract)

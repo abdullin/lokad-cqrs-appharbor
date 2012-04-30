@@ -6,9 +6,9 @@
 #endregion
 
 using System.Runtime.Serialization;
-using Lokad.Cqrs.AtomicStorage;
+using SaaS.AtomicStorage;
 
-namespace Sample
+namespace SaaS
 {
     public sealed class DomainIdentityGenerator : IDomainIdentityService
     {

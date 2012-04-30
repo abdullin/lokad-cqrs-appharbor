@@ -5,7 +5,9 @@
 
 #endregion
 
-namespace Sample.Aggregates.Security
+using Sample;
+
+namespace SaaS.Aggregates.Security
 {
     public sealed class update_security_item_display_name : specs
     {

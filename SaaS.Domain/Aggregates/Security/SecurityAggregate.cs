@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Sample.Aggregates.Security
+namespace SaaS.Aggregates.Security
 {
     public sealed class SecurityAggregate
     {

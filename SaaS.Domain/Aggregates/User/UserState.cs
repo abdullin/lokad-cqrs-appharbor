@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Sample.Aggregates.User
+namespace SaaS.Aggregates.User
 {
     public sealed class UserState : IUserState
     {

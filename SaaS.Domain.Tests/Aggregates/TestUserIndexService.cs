@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Sample.Aggregates
+namespace SaaS.Aggregates
 {
     public sealed class TestUserIndexService : IUserIndexService
     {

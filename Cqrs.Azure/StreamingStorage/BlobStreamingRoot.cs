@@ -5,10 +5,10 @@
 
 #endregion
 
-using Lokad.Cqrs.StreamingStorage;
 using Microsoft.WindowsAzure.StorageClient;
+using SaaS.StreamingStorage;
 
-namespace Lokad.Cqrs.Feature.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     /// <summary>
     /// Windows Azure implementation of storage 

@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Lokad.Cqrs.Partition
+namespace SaaS.Partition
 {
     public interface IQueueWriterFactory
     {

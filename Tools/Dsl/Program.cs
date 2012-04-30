@@ -9,7 +9,6 @@ using System;
 using System.Collections.Concurrent;
 using System.IO;
 using System.Media;
-using Lokad.CodeDsl;
 
 namespace Hub.Dsl
 {
@@ -83,14 +82,14 @@ namespace Hub.Dsl
             var dsl = text;
             var generator = new TemplatedGenerator()
                 {
-                    Namespace = "Sample",
+                    Namespace = "SaaS",
                     GenerateInterfaceForEntityWithModifiers = "?",
                     TemplateForInterfaceName = "public interface I{0}Aggregate",
                     TemplateForInterfaceMember = "void When({0} c);",
                     ClassNameTemplate = @"
     
 
-[DataContract(Namespace = ""Sample"")]
+[DataContract(Namespace = ""SaaS"")]
 public partial class {0}",
                     MemberTemplate = "[DataMember(Order = {0})] public {1} {2} {{ get; private set; }}",
                     

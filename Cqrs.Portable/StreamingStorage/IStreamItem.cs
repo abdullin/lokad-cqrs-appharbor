@@ -7,7 +7,7 @@
 
 using System.IO;
 
-namespace Lokad.Cqrs.StreamingStorage
+namespace SaaS.StreamingStorage
 {
     /// <summary>
     /// Base interface for performing storage operations against local or remote persistence.

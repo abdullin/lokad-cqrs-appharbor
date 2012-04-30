@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Lokad.Cqrs.AtomicStorage
+namespace SaaS.AtomicStorage
 {
     /// <summary>
     /// View writer interface, used by the event handlers

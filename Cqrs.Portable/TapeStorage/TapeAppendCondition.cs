@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace Lokad.Cqrs.TapeStorage
+namespace SaaS.TapeStorage
 {
     /// <summary>
     /// <para>Allows to specify optional condition for appending to the storage.</para>

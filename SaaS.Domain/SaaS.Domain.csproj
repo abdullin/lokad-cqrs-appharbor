@@ -8,8 +8,8 @@
     <ProjectGuid>{85F10E26-B454-4719-9ADD-A8CD147B0AE4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sample</RootNamespace>
-    <AssemblyName>Sample.Domain</AssemblyName>
+    <RootNamespace>SaaS</RootNamespace>
+    <AssemblyName>SaaS.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,7 +49,6 @@
     <Compile Include="DomainBoundedContext.cs" />
     <Compile Include="DomainIdentityGenerator.cs" />
     <Compile Include="Aggregates\User\UserAggregate.cs" />
-    <Compile Include="Maybe.cs" />
     <Compile Include="Processes\RegistrationReceptor.cs" />
     <Compile Include="Processes\ReplicationProcess.cs" />
     <Compile Include="PasswordGenerator.cs" />
