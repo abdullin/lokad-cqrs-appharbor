@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     /// <summary>
     /// Is published whenever an event is sent.

@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace SaaS.Partition
+namespace Lokad.Cqrs.Partition
 {
     /// <summary>
     /// Describes retrieved message along with the queue name and some transport info.

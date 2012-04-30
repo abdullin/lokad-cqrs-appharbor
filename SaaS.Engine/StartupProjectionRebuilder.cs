@@ -6,10 +6,9 @@ using System.Runtime.Serialization;
 using System.Text;
 using Lokad.Cqrs;
 using Lokad.Cqrs.AtomicStorage;
+using Lokad.Cqrs.TapeStorage;
 using Mono.Cecil;
-using SaaS.AtomicStorage;
 using SaaS.Client;
-using SaaS.TapeStorage;
 using SaaS.Wires;
 
 namespace SaaS.Engine

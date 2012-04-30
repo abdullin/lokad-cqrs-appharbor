@@ -8,10 +8,10 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using SaaS.Dispatch.Events;
-using SaaS.Partition;
+using Lokad.Cqrs.Dispatch.Events;
+using Lokad.Cqrs.Partition;
 
-namespace SaaS.Dispatch
+namespace Lokad.Cqrs.Dispatch
 {
     /// <summary>
     /// Engine process that coordinates pulling messages from queues and

@@ -10,7 +10,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SaaS.TapeStorage
+namespace Lokad.Cqrs.TapeStorage
 {
     /// <summary>
     /// Named tape stream, that usually matches to an aggregate instance

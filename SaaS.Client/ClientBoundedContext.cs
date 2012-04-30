@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using SaaS.AtomicStorage;
+using Lokad.Cqrs;
+using Lokad.Cqrs.AtomicStorage;
 using SaaS.Client.Projections.LoginIndex;
 using SaaS.Client.Projections.LoginView;
 using SaaS.Client.Projections.Registration;

@@ -8,6 +8,7 @@
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Lokad.Cqrs;
 using SaaS;
 
 namespace Audit.Util

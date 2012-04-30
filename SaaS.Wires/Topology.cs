@@ -1,8 +1,9 @@
 using System;
 using System.Linq;
-using SaaS.Envelope;
-using SaaS.Partition;
-using SaaS.TapeStorage;
+using Lokad.Cqrs;
+using Lokad.Cqrs.Envelope;
+using Lokad.Cqrs.Partition;
+using Lokad.Cqrs.TapeStorage;
 
 namespace SaaS.Wires
 {

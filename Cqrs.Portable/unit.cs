@@ -8,7 +8,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SaaS
+namespace Lokad.Cqrs
 {
     /// <summary>
     /// Equivalent to System.Void which is not allowed to be used in the code for some reason.

@@ -9,7 +9,6 @@ using System;
 using System.Collections.Generic;
 using Microsoft.WindowsAzure.StorageClient;
 using System.Linq;
-using SaaS.StreamingStorage;
 
 namespace Lokad.Cqrs.StreamingStorage
 {

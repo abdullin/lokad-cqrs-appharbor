@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SaaS.AtomicStorage
+namespace Lokad.Cqrs.AtomicStorage
 {
     public interface IDocumentStore
     {

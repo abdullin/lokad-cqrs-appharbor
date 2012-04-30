@@ -8,13 +8,13 @@
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
-using SaaS.AtomicStorage;
-using SaaS.Partition;
+using Lokad.Cqrs.AtomicStorage;
+using Lokad.Cqrs.Partition;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable MemberCanBePrivate.Global
 
-namespace SaaS
+namespace Lokad.Cqrs
 {
     public static class MemoryStorage
     {

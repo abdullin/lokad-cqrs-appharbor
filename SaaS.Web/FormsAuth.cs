@@ -12,7 +12,6 @@ using System.Web.Caching;
 using System.Web.Mvc;
 using System.Web.Security;
 using Lokad.Cqrs.AtomicStorage;
-using SaaS.AtomicStorage;
 using SaaS.Client;
 using SaaS.Client.Projections.LoginView;
 

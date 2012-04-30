@@ -12,7 +12,7 @@ using System.Linq;
 
 //using ProtoBuf;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     public sealed class EnvelopeStreamer : IEnvelopeStreamer
     {

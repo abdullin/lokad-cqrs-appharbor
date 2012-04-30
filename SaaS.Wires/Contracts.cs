@@ -10,11 +10,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Lokad.Cqrs;
+using Lokad.Cqrs.AtomicStorage;
+using Lokad.Cqrs.Envelope;
+using Lokad.Cqrs.Evil;
 using ProtoBuf;
 using ProtoBuf.Meta;
-using SaaS.AtomicStorage;
-using SaaS.Envelope;
-using SaaS.Evil;
 using ServiceStack.Text;
 
 namespace SaaS.Wires

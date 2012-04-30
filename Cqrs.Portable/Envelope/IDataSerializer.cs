@@ -8,7 +8,7 @@
 using System;
 using System.IO;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     /// <summary>
     /// Joins data serializer and contract mapper

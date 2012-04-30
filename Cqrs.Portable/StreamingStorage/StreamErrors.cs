@@ -8,7 +8,7 @@
 using System;
 using System.Globalization;
 
-namespace SaaS.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     /// <summary>
     /// Helper class for throwing storage exceptions in a consistent way.

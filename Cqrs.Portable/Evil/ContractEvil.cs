@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SaaS.Evil
+namespace Lokad.Cqrs.Evil
 {
     public static class ContractEvil
     {

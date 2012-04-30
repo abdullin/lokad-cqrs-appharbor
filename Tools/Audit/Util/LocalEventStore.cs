@@ -9,8 +9,9 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Lokad.Cqrs;
+using Lokad.Cqrs.TapeStorage;
 using SaaS;
-using SaaS.TapeStorage;
 
 namespace Audit.Util
 {

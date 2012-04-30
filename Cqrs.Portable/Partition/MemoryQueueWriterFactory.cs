@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace SaaS.Partition
+namespace Lokad.Cqrs.Partition
 {
     public sealed class MemoryQueueWriterFactory : IQueueWriterFactory
     {

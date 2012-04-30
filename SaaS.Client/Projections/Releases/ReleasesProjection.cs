@@ -1,4 +1,5 @@
-using SaaS.AtomicStorage;
+using Lokad.Cqrs;
+using Lokad.Cqrs.AtomicStorage;
 
 namespace SaaS.Client.Projections.Releases
 {

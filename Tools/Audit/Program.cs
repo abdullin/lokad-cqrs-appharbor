@@ -10,8 +10,9 @@ using System.IO;
 using System.Windows.Forms;
 using Audit.Util;
 using Audit.Views;
+using Lokad.Cqrs;
+using Lokad.Cqrs.TapeStorage;
 using SaaS;
-using SaaS.TapeStorage;
 using SaaS.Wires;
 
 namespace Audit

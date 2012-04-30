@@ -7,7 +7,7 @@
 
 using System;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     /// <summary>
     /// Implements quarantine logic for the specific message handler. Default implementation 

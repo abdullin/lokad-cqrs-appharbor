@@ -8,10 +8,10 @@
 using System;
 using System.Linq;
 using System.Security.Cryptography;
-using SaaS.Envelope;
-using SaaS.Partition;
+using Lokad.Cqrs.Envelope;
+using Lokad.Cqrs.Partition;
 
-namespace SaaS
+namespace Lokad.Cqrs
 {
     public enum IdGeneration
     {

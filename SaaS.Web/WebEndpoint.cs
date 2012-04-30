@@ -9,9 +9,8 @@ using System;
 using System.Globalization;
 using Lokad.Cqrs;
 using Lokad.Cqrs.AtomicStorage;
-using SaaS.AtomicStorage;
-using SaaS.Envelope;
-using SaaS.Partition;
+using Lokad.Cqrs.Envelope;
+using Lokad.Cqrs.Partition;
 
 namespace SaaS.Web
 {

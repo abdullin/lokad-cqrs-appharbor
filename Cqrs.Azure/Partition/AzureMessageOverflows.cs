@@ -1,6 +1,6 @@
 using System;
 using System.Text;
-using SaaS.Envelope;
+using Lokad.Cqrs.Envelope;
 
 namespace Lokad.Cqrs.Partition
 {

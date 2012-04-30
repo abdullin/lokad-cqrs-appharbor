@@ -5,7 +5,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.WindowsAzure.StorageClient;
-using SaaS.TapeStorage;
 
 namespace Lokad.Cqrs.TapeStorage
 {

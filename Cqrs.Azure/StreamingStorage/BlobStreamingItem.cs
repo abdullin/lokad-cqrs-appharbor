@@ -8,7 +8,6 @@
 using System.IO;
 using System.IO.Compression;
 using Microsoft.WindowsAzure.StorageClient;
-using SaaS.StreamingStorage;
 
 namespace Lokad.Cqrs.StreamingStorage
 {

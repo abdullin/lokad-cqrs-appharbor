@@ -6,7 +6,6 @@
 #endregion
 
 using System.Collections.Concurrent;
-using SaaS.Partition;
 
 namespace Lokad.Cqrs.Partition
 {

@@ -9,7 +9,7 @@ using System;
 using System.Collections.Concurrent;
 using System.IO;
 
-namespace SaaS.TapeStorage
+namespace Lokad.Cqrs.TapeStorage
 {
     public sealed class FileTapeContainer : ITapeContainer
     {

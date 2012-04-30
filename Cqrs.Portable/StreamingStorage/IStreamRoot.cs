@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace SaaS.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     /// <summary>
     /// Storage root (Azure Blob account or file drive)

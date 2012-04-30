@@ -8,7 +8,7 @@
 using System;
 using System.Reflection;
 
-namespace SaaS.Evil
+namespace Lokad.Cqrs.Evil
 {
     /// <summary>
     /// Helper class for generating exceptions

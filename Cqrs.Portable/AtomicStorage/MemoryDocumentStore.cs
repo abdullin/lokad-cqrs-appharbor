@@ -10,7 +10,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SaaS.AtomicStorage
+namespace Lokad.Cqrs.AtomicStorage
 {
     public sealed class MemoryDocumentStore : IDocumentStore
     {
@@ -45,7 +45,11 @@ namespace SaaS.AtomicStorage
 
         public void Reset(string bucketNames)
         {
-            throw new NotSupportedException();
+            ConcurrentDictionary<string, byte[]> dict;
+            if (_store.TryGetValue(bucketNames, out dict))
+            {
+                dict.Clear();
+            }
         }
 
 

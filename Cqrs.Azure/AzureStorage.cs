@@ -9,15 +9,12 @@
 using System;
 using System.Threading;
 using Lokad.Cqrs.AtomicStorage;
+using Lokad.Cqrs.Evil;
 using Lokad.Cqrs.Partition;
 using Lokad.Cqrs.StreamingStorage;
 using Lokad.Cqrs.TapeStorage;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.StorageClient;
-using SaaS;
-using SaaS.AtomicStorage;
-using SaaS.Evil;
-using SaaS.StreamingStorage;
 
 // ReSharper disable UnusedMember.Global
 // ReSharper disable MemberCanBePrivate.Global

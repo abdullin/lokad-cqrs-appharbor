@@ -9,7 +9,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Xml;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     public sealed class EnvelopeSerializerWithDataContracts : IEnvelopeSerializer
     {

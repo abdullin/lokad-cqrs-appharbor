@@ -10,9 +10,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Xml;
-using SaaS.Evil;
+using Lokad.Cqrs.Evil;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     /// <summary>
     /// Message serializer for the <see cref="DataContractSerializer"/>. It is the default serializer in Lokad.CQRS.

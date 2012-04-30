@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     public static class MessageAttributes
     {

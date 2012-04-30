@@ -8,7 +8,6 @@
 using System;
 using System.Threading;
 using System.Linq;
-using SaaS.Partition;
 
 namespace Lokad.Cqrs.Partition
 {

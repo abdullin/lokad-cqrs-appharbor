@@ -7,7 +7,7 @@
 
 using System;
 
-namespace SaaS.AtomicStorage
+namespace Lokad.Cqrs.AtomicStorage
 {
     public static class ExtendDocumentReader
     {

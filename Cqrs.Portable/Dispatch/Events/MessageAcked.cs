@@ -6,9 +6,9 @@
 #endregion
 
 using System;
-using SaaS.Partition;
+using Lokad.Cqrs.Partition;
 
-namespace SaaS.Dispatch.Events
+namespace Lokad.Cqrs.Dispatch.Events
 {
     [Serializable]
     public sealed class MessageAcked : ISystemEvent

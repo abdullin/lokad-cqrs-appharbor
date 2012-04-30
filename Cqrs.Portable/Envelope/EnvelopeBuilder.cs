@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     public sealed class EnvelopeBuilder : HideObjectMembersFromIntelliSense
     {

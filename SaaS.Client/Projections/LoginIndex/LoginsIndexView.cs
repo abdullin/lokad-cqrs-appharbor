@@ -8,7 +8,8 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using SaaS.AtomicStorage;
+using Lokad.Cqrs;
+using Lokad.Cqrs.AtomicStorage;
 
 namespace SaaS.Client.Projections.LoginIndex
 {

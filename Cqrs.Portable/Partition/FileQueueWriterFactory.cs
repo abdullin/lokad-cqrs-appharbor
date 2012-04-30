@@ -7,7 +7,7 @@
 
 using System.IO;
 
-namespace SaaS.Partition
+namespace Lokad.Cqrs.Partition
 {
     public sealed class FileQueueWriterFactory : IQueueWriterFactory
     {

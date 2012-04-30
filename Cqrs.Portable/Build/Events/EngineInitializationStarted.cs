@@ -7,7 +7,7 @@
 
 using System;
 
-namespace SaaS.Build.Events
+namespace Lokad.Cqrs.Build.Events
 {
     [Serializable]
     public sealed class EngineInitializationStarted : ISystemEvent

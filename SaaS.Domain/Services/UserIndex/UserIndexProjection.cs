@@ -7,7 +7,7 @@
 
 using System.Security.Cryptography;
 using System.Text;
-using SaaS.AtomicStorage;
+using Lokad.Cqrs.AtomicStorage;
 
 namespace SaaS.Services.UserIndex
 {

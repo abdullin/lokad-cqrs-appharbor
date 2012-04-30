@@ -6,7 +6,7 @@
 #endregion
 
 using System.Runtime.Serialization;
-using SaaS.AtomicStorage;
+using Lokad.Cqrs.AtomicStorage;
 
 namespace SaaS
 {

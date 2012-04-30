@@ -6,9 +6,8 @@
 #endregion
 
 using System;
+using Lokad.Cqrs.Envelope;
 using Microsoft.WindowsAzure.StorageClient;
-using SaaS.Envelope;
-using SaaS.Partition;
 
 namespace Lokad.Cqrs.Partition
 {

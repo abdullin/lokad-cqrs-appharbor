@@ -13,8 +13,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Audit.Util;
+using Lokad.Cqrs;
+using Lokad.Cqrs.Envelope;
 using SaaS;
-using SaaS.Envelope;
 
 namespace Audit.Views
 {

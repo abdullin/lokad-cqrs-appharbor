@@ -7,12 +7,10 @@
 
 using System;
 using System.Threading;
+using Lokad.Cqrs.Dispatch.Events;
+using Lokad.Cqrs.Envelope;
+using Lokad.Cqrs.Partition.Events;
 using Microsoft.WindowsAzure.StorageClient;
-using SaaS;
-using SaaS.Dispatch.Events;
-using SaaS.Envelope;
-using SaaS.Partition;
-using SaaS.Partition.Events;
 
 namespace Lokad.Cqrs.Partition
 {

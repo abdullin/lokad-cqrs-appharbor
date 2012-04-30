@@ -7,9 +7,9 @@
 
 using System;
 using System.Threading;
-using SaaS.Envelope.Events;
+using Lokad.Cqrs.Envelope.Events;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     public sealed class EnvelopeDispatcher
     {

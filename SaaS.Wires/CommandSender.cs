@@ -1,3 +1,5 @@
+using Lokad.Cqrs;
+
 namespace SaaS.Wires
 {
     public sealed class CommandSender : ICommandSender

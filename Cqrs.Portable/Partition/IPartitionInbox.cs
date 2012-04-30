@@ -7,7 +7,7 @@
 
 using System.Threading;
 
-namespace SaaS.Partition
+namespace Lokad.Cqrs.Partition
 {
     /// <summary>
     /// Retrieves (waiting if needed) message from one or more queues

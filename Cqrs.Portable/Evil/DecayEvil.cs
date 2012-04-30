@@ -7,7 +7,7 @@
 
 using System;
 
-namespace SaaS.Evil
+namespace Lokad.Cqrs.Evil
 {
     /// <summary>
     /// Helper to build decay functions

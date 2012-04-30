@@ -9,7 +9,6 @@ using System;
 using System.Collections.Concurrent;
 using System.Linq;
 using Microsoft.WindowsAzure.StorageClient;
-using SaaS.TapeStorage;
 
 namespace Lokad.Cqrs.TapeStorage
 {

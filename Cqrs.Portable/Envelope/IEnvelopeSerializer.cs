@@ -7,7 +7,7 @@
 
 using System.IO;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     public interface IEnvelopeSerializer
     {

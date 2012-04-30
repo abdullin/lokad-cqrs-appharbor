@@ -7,7 +7,7 @@
 
 using System.Collections.Concurrent;
 
-namespace SaaS.Partition
+namespace Lokad.Cqrs.Partition
 {
     public sealed class MemoryQueueWriter : IQueueWriter
     {

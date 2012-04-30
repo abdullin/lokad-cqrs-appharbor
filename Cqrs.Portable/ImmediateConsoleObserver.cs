@@ -8,7 +8,7 @@
 using System;
 using System.Diagnostics;
 
-namespace SaaS
+namespace Lokad.Cqrs
 {
     public class ImmediateConsoleObserver : IObserver<ISystemEvent>
     {

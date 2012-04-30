@@ -5,7 +5,7 @@
 
 #endregion
 
-namespace SaaS
+namespace Lokad.Cqrs
 {
     /// <summary>
     /// System event representing something that happened

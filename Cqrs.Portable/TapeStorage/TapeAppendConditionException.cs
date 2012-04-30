@@ -8,7 +8,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace SaaS.TapeStorage
+namespace Lokad.Cqrs.TapeStorage
 {
     /// <summary>
     /// Is thrown internally, when storage version does not match the condition specified in <see cref="TapeAppendCondition"/>

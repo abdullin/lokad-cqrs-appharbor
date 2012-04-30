@@ -7,7 +7,7 @@
 
 using System.IO;
 
-namespace SaaS.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     /// <summary>
     /// File-based implementation of the <see cref="IStreamItem"/>

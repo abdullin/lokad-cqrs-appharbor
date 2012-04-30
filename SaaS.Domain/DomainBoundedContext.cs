@@ -9,10 +9,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Lokad.Cqrs.AtomicStorage;
 using SaaS.Aggregates.Register;
 using SaaS.Aggregates.Security;
 using SaaS.Aggregates.User;
-using SaaS.AtomicStorage;
 using SaaS.Processes;
 using SaaS.Services.UserIndex;
 

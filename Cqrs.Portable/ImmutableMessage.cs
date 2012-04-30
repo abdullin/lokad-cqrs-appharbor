@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SaaS
+namespace Lokad.Cqrs
 {
     //[DebuggerDisplay("{MappedType.Name} with {")]
     public sealed class ImmutableMessage

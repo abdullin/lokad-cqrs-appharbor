@@ -7,7 +7,7 @@
 
 using System;
 
-namespace SaaS.AtomicStorage
+namespace Lokad.Cqrs.AtomicStorage
 {
     /// <summary>
     /// Basic usability wrapper for the atomic storage operations, that does not enforce concurrency handling. 

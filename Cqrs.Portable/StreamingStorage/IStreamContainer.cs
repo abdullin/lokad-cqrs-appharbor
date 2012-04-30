@@ -7,7 +7,7 @@
 
 using System.Collections.Generic;
 
-namespace SaaS.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     /// <summary>
     /// Represents storage container reference.

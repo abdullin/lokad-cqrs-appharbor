@@ -9,7 +9,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SaaS
+namespace Lokad.Cqrs
 {
     /// <summary>
     /// Generic process interface, that is registered in the container and managed by the Engine. 

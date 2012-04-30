@@ -9,7 +9,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace SaaS.StreamingStorage
+namespace Lokad.Cqrs.StreamingStorage
 {
     /// <summary>
     /// Helper extensions for the <see cref="IStreamItem"/>

@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     public abstract class AbstractDataSerializer : IDataSerializer
     {

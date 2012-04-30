@@ -7,7 +7,7 @@
 
 using System.IO;
 
-namespace SaaS.AtomicStorage
+namespace Lokad.Cqrs.AtomicStorage
 {
     public interface IDocumentSerializer
     {

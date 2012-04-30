@@ -10,7 +10,7 @@ using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SaaS.Envelope
+namespace Lokad.Cqrs.Envelope
 {
     ///<summary>
     /// Shoud be registered as singleton, manages actual memories

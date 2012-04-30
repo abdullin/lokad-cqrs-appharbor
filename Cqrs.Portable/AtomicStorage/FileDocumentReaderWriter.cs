@@ -8,7 +8,7 @@
 using System;
 using System.IO;
 
-namespace SaaS.AtomicStorage
+namespace Lokad.Cqrs.AtomicStorage
 {
     public sealed class FileDocumentReaderWriter<TKey, TEntity> : IDocumentReader<TKey, TEntity>,
                                                                   IDocumentWriter<TKey, TEntity>
