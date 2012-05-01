@@ -1,7 +1,0 @@
-*.cscfg text
-*.csdef text
-*.config text
-*.conf text
-*.xml text
-*.js text
-* text=auto
