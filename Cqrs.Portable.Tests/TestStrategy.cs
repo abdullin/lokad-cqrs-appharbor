@@ -11,7 +11,7 @@ namespace Lokad.Cqrs.Feature.AtomicStorage
     {
         public string GetEntityBucket<TEntity>()
         {
-            return typeof(TEntity).Name.ToLowerInvariant();
+            return "test-" + typeof(TEntity).Name.ToLowerInvariant();
         }
 
         public string GetEntityLocation(Type entity, object key)

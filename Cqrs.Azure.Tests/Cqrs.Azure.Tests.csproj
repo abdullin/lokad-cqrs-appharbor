@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24DA9150-1C7E-45B3-8A75-EA529081237F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lokad.Cqrs</RootNamespace>
+    <AssemblyName>Lokad.Cqrs.Azure.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\Azure\Microsoft.WindowsAzure.StorageClient.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Library\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\Library\ProtoBuf-net\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicClientConfigurationTests.cs" />
+    <Compile Include="AtomicStorage\Given_Atomic_Scenarios_When_Azure.cs" />
+    <Compile Include="AtomicStorage\Given_Atomic_Scenarios_When_Composite_Azure.cs" />
+    <Compile Include="TapeStorage\BlobTapeStorageTests.cs" />
+    <Compile Include="TapeStorage\BlockBlobTapeStorageTests.cs" />
+    <Compile Include="MiscTests.cs" />
+    <Compile Include="Performance_tests_for_throughput.cs" />
+    <Compile Include="Performance_tests_for_reaction.cs" />
+    <Compile Include="Synthetic\Given_Basic_Scenarios_When_Azure.cs" />
+    <Compile Include="Serialization\ProtobufFixture.cs" />
+    <Compile Include="Envelope\Play_all_for_ProtoBuf.cs" />
+    <Compile Include="Serialization\ProtoBufDataTests.cs" />
+    <Compile Include="Serialization\ProtoBufNativeTests.cs" />
+    <Compile Include="Serialization\ProtoBufXmlTests.cs" />
+    <Compile Include="StreamingStorage\Play_all_for_BlobStreaming.cs" />
+    <Compile Include="Synthetic\Given_Basic_Scenarios_When_Composite_Azure.cs" />
+    <Compile Include="Synthetic\Given_Tx_Scenarios_When_Composite_Azure.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cqrs.Azure\Cqrs.Azure.csproj">
+      <Project>{AEE2B47D-591D-42B5-8EDC-CC676A661F9D}</Project>
+      <Name>Cqrs.Azure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cqrs.Portable.Tests\Cqrs.Portable.Tests.csproj">
+      <Project>{96E3B247-C04C-4138-A042-7969562B4B0F}</Project>
+      <Name>Cqrs.Portable.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cqrs.Portable\Cqrs.Portable.csproj">
+      <Project>{4E2E749C-4D6F-4EF8-8E9D-96D467306997}</Project>
+      <Name>Cqrs.Portable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
